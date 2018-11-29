@@ -32,7 +32,7 @@ html, body { height:100%;}
 	
 	/*Gallery*/
 	#gallery {
-		height:496px;
+		height:255px;
 		overflow:hidden;
 		background:url(../images/gallerry-bg.gif) 0 0 repeat-x;
 	}
@@ -263,12 +263,12 @@ header nav {
 /*===== gallery =====*/
 .roundabout-holder  { 
 	width:850px;
-	height:496px;
+	height:255px;
 	margin:0 auto;
 }
 .roundabout-moveable-item {
    width: 646px;
-   height: 416px;
+   height: 255px;
    cursor: pointer;
 	 border:3px solid #ccc;
 	 border:3px solid rgba(0, 0, 0, 0.08);
