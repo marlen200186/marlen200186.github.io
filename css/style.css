@@ -10,7 +10,7 @@ body {
 	line-height:1.125em;
 	color:#242424;
 }
-html { min-width:1000px;}
+html { min-width:1050px;}
 html, body { height:100%;}
 
 
@@ -19,7 +19,7 @@ html, body { height:100%;}
 .container {
 	margin: 0 auto;
 	position: relative;
-	width: 1000px;
+	width: 1050px;
 	font-size:.8125em;
 }
 
@@ -39,7 +39,7 @@ html, body { height:100%;}
 	
 	/* Content */
 	#content {
-		float: left;
+		float: right;
 		width: 572px;
 	}
 	
@@ -76,7 +76,7 @@ html, body { height:100%;}
 }
 
 /* The inside class provides consistent padding. To be used often! */
-.inside{ padding: 32px 37px 50px 37px; }
+.inside{ padding: 25px 37px 10px 37px; }
 
 
 /*----- form defaults -----*/
@@ -145,7 +145,7 @@ h2 {
 	line-height:1.2em;
 	font-weight:normal;
 	color:#212222;
-	margin-bottom:22px;
+	margin-bottom:15px;
 }
 	h2 span {
 		color:#8a8a8a;
