@@ -15,7 +15,7 @@ object, ol, output,
 p, pre, progress,
 q, 
 s, samp, section, small, span, source, strike, strong, sub, sup,
-table, tbody, tfoot, thead, th, tr, tdvideo, tt,
+table1, table, tbody, tfoot, thead, th, tr, tdvideo, tt,
 u, ul, 
 var{
     background: transparent;
@@ -33,11 +33,17 @@ ol, ul {
 blockquote, q {
 	quotes: none;
 }
-table, table td { 
+/*table, table td th{ 
 	padding:0;
-	border:none;
+	border: 10px solid grey;
 	border-collapse:collapse;
 }
+table1, table1 td th{ 
+	padding:0;
+	border: 1px solid grey;
+	border-collapse:collapse;
+}*/
+
 img {
 	vertical-align:top; 
 }
