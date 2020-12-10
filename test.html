@@ -1,13 +1,24 @@
 <html>
-<head><title>Тест</title>
+  
+<head><title>Подготовка. КЕГЭ| UDINA.ML</title>
 <meta charset="utf-8">
-
-
+ <link rel="shortcut icon" href="images/logo.ico" type="image/x-icon">
+<!--
 <link rel="stylesheet" href="data/css/bootstrap.min.css">
-<script  type="text/javascript"src="data/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="data/data.js"></script>
-<script type="text/javascript" src='http://code.jquery.com/jquery-2.1.1.min.js'></script>
+<script  type="text/javascript"  src="data/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="data/data.js" ></script>
+<script type="text/javascript" src='http://code.jquery.com/jquery-2.1.1.min.js'crossorigin = "anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+-->
+<link rel="stylesheet" href="data/css/style.css" type="text/css" media="all">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="data/data.js" ></script>
+<script type="text/javascript" src="data/js/panel.js" ></script>
 <style>
+
 body {
   display: -ms-flexbox;
   display: -webkit-box;
@@ -18,12 +29,17 @@ body {
   align-items: center;
   -webkit-box-pack: center;
   justify-content: center;
-  padding-top: 40px;
+  padding-top: 80px;    <!-- расстояние от верха до таблицы с результатами-->
   padding-bottom: 40px;
   background-color: #f5f5f5;
 }
-p, span, input, td {
+p {
  font-size:24px;
+
+}
+ span, input, td {
+ font-size:24px;
+ 
 }
 button{
     font-size:18px;
@@ -33,125 +49,528 @@ button{
 }
 
 #LabelZad {
-     font-size:14px;
+     font-size:17px;
 	 color:blue;
+	 padding-top:20px;
 	 
 }
-
+#textZagalovka {
+font-size:34px;
+	font-size:34px;
+	line-height:1.2em;
+	color:#fff;
+	font-weight:normal;
+	font-family:Arial, Helvetica, sans-serif;
+	 
+}
 </style>
 </head>
+<input id="kolich" style="display:none"  > <br>
+
+ <header align="top">
+    <div class="container">
+   	<h1 > <span id="textZagalovka"><a href="index.html">Информатика.Яр </a></span>  </h1>
+   
+    </div>
+	</header> 
 
 <!--****************************************************************************************  -->
 <body class="text-center">
 
-<div id="LabeZad1"> 
+<!--***********************************************************************************создаем кнопки для переключения между вопросами********-->
+<div id="panel" class="alert alert-secondary" style=" position: absolute; left:20px; top:80px; display:none">
+
+<button id="knopkaVopros1" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya1();">Вопрос 1</button>
+<button id="knopkaVopros2" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya2();">Вопрос 2</button>
+<button id="knopkaVopros3" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya3();">Вопрос 3</button>
+<button id="knopkaVopros4" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya4();">Вопрос 4</button>
+<button id="knopkaVopros5" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya5();">Вопрос 5</button>
+<button id="knopkaVopros6" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya6();">Вопрос 6</button>
+<button id="knopkaVopros7" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya7();">Вопрос 7</button>
+<button id="knopkaVopros8" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya8();">Вопрос 8</button>
+<button id="knopkaVopros9" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya9();">Вопрос 9</button>
+<button id="knopkaVopros10" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya10();">Вопрос 10</button>
+
+<button id="knopkaVopros11" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya11();">Вопрос 11</button>
+<button id="knopkaVopros12" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya12();">Вопрос 12</button>
+<button id="knopkaVopros13" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya13();">Вопрос 13</button>
+<button id="knopkaVopros14" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya14();">Вопрос 14</button>
+<button id="knopkaVopros15" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya15();">Вопрос 15</button>
+<button id="knopkaVopros16" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya16();">Вопрос 16</button>
+<button id="knopkaVopros17" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya17();">Вопрос 17</button>
+<button id="knopkaVopros18" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya18();">Вопрос 18</button>
+<button id="knopkaVopros19" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya19();">Вопрос 19</button>
+
+<button id="knopkaVopros20" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya20();">Вопрос 20</button>
+<button id="knopkaVopros21" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya21();">Вопрос 21</button>
+<button id="knopkaVopros22" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya22();">Вопрос 22</button>
+<button id="knopkaVopros23" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya23();">Вопрос 23</button>
+<button id="knopkaVopros24" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya24();">Вопрос 24</button>
+<button id="knopkaVopros25" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya25();">Вопрос 25</button>
+<button id="knopkaVopros26" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya26();">Вопрос 26</button>
+<button id="knopkaVopros27" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya27();">Вопрос 27</button>
+<button id="knopkaVopros28" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya28();">Вопрос 28</button>
+<button id="knopkaVopros29" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya29();">Вопрос 29</button>
+
+<button id="knopkaVopros30" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya30();">Вопрос 30</button>
+<button id="knopkaVopros31" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya31();">Вопрос 31</button>
+<button id="knopkaVopros32" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya32();">Вопрос 32</button>
+<button id="knopkaVopros33" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya33();">Вопрос 33</button>
+<button id="knopkaVopros34" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya34();">Вопрос 34</button>
+<button id="knopkaVopros35" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya35();">Вопрос 35</button>
+<button id="knopkaVopros36" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya36();">Вопрос 36</button>
+<button id="knopkaVopros37" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya37();">Вопрос 37</button>
+<button id="knopkaVopros38" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya38();">Вопрос 38</button>
+<button id="knopkaVopros39" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya39();">Вопрос 39</button>
+
+<button id="knopkaVopros40" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya40();">Вопрос 40</button>
+<button id="knopkaVopros41" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya41();">Вопрос 41</button>
+<button id="knopkaVopros42" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya42();">Вопрос 42</button>
+<button id="knopkaVopros43" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya43();">Вопрос 43</button>
+<button id="knopkaVopros44" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya44();">Вопрос 44</button>
+<button id="knopkaVopros45" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya45();">Вопрос 45</button>
+<button id="knopkaVopros46" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya46();">Вопрос 46</button>
+<button id="knopkaVopros47" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya47();">Вопрос 47</button>
+<button id="knopkaVopros48" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya48();">Вопрос 48</button>
+<button id="knopkaVopros49" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya49();">Вопрос 49</button>
+<button id="knopkaVopros50" class="btn btn-lg btn-primary btn-block" style="position: relative;  display:none;width:150px; height:30px; font-size:10px;" onclick="vkluchitNumberZadaniya50();">Вопрос 50</button>
+</div>
+<!--******************************************************************************************************************************************-->
+
+ <div id="identification" style="display:block; ">
+  <font size=5 color=blue>Введите идентификатор </font><br><br>
+  <input id="idNomer">  <br> <br>
+  <button id="vhod" class="btn btn-lg btn-primary btn-block" style="margin-left:auto;margin-right:auto;width:250px;" onclick="voiti();">Войти</button>
+ </div>
+ 
+<!--******************************************************************************************************************************************-->
+
+
+<div id="LabelZad1" style="line-height:0.5; vertical-align:text-bottom; display:none;"> 
      <span id="LabelZad"> 
-	       Задание №1   
-	       <input type="number" style="width:70px; font-size:14px;" step="1" min="0" placeholder="0"  id="kol1" > <br> <br>
-	       Задание №2  
-	       <input type="number" style="width:70px; font-size:14px;" step="1" min="0" placeholder="0"  id="kol2" >  <br> <br>
-	      Задание №3  
-	       <input type="number" style="width:70px; font-size:14px;" step="1" min="0" placeholder="0"  id="kol3" >  <br> <br>
-	
+	        Задание №1 &nbsp;   
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol1" >   &emsp;&emsp;
+	        Задание №14  
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol14" >  <br> <br>
+		   
+		   
+	        Задание №2  &nbsp;
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol2" > &emsp;&emsp; 
+	        Задание №15 
+	       <input type="number" style="width:70px;font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol15" >  <br> <br>
+		   
+		   
+		    Задание №3 &nbsp;  
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol3" >  &emsp;&emsp;
+		    Задание №16
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol16" >  <br> <br>
+		   
+		   
+		    Задание №4 &nbsp; 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol4" >  &emsp;&emsp;
+		    Задание №17 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol17" >  <br> <br>
+		   
+		   
+		    Задание №5 &nbsp; 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol5" >  &emsp;&emsp;
+		    Задание №18  
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol18" >  <br> <br>
+		   
+		   
+		    Задание №6 &nbsp; 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol6" >  &emsp;&emsp;
+		    Задание №19  
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol19" >  <br> <br>
+		   
+		   
+		    Задание №7 &nbsp; 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol7" > &emsp;&emsp;
+		    Задание №20  
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol20" >  <br> <br>
+		   
+		   
+		    Задание №8 &nbsp; 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol8" > &emsp;&emsp;
+		    Задание №21 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol21" >  <br> <br>
+		   
+		   
+		    Задание №9 &nbsp; 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol9" >  &emsp;&emsp;
+		    Задание №22 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol22" >  <br> <br>
+		   
+		   
+		    Задание №10 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol10" > &emsp;&emsp;
+		    Задание №23 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol23" >  <br> <br>
+		   
+		   
+		    Задание №11 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol11" >  &emsp;&emsp;
+		    Задание №24 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol24" >  <br> <br>
+		   
+		   
+		    Задание №12 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol12" > &emsp;&emsp;
+		    Задание №25 
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol25" >  <br> <br>
+		   
+		   
+		    Задание №13
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol13" > &emsp;&emsp;
+		    Задание №26  
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol26" >  <br> <br>
+		   
+		   
+		    Задание №27  
+	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol27" >  <br> <br>
 	 </span>
 
     <button id="play" class="btn btn-lg btn-primary btn-block" style="margin-left:auto;margin-right:auto;width:250px;" onclick="nachat()";> Начать </button> 
 </div>
 
-<p id="name_test" style="font-weight:bold;position:absolute;top:20px;">Тест. Тема - "<span id="tema"> </span>".</p>
-<div style="text-align:center;">
-
-<div class="card">
- <!--<div class="card-body">  -->
 
 
+
+
+<div style="text-align:center; ">
+    <div class="card" >
  
+         <div id="vopros1" style="display:none">
+              <p style="margin: 0rem">Вопрос 1</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_1"></span> <input class="form-control" type="text"  id="z_1"></p>
+             </div>
+        </div>
+		
+         <div id="vopros2" style="display:none">
+              <p style="margin: 0rem">Вопрос 2</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_2"></span> <input class="form-control" type="text"  id="z_2"></p>
+             </div>
+        </div>
+         <div id="vopros3" style="display:none">
+              <p style="margin: 0rem">Вопрос 3</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_3"></span> <input class="form-control" type="text"  id="z_3"></p>
+             </div>
+        </div>
+         <div id="vopros4" style="display:none">
+              <p style="margin: 0rem">Вопрос 4</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_4"></span> <input class="form-control" type="text"  id="z_4"></p>
+             </div>
+        </div>
+         <div id="vopros5" style="display:none">
+              <p style="margin: 0rem">Вопрос 5</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_5"></span> <input class="form-control" type="text"  id="z_5"></p>
+             </div>
+        </div>
+         <div id="vopros6" style="display:none">
+              <p style="margin: 0rem">Вопрос 6</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_6"></span> <input class="form-control" type="text"  id="z_6"></p>
+             </div>
+        </div>
+         <div id="vopros7" style="display:none">
+              <p style="margin: 0rem">Вопрос 7</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_7"></span> <input class="form-control" type="text"  id="z_7"></p>
+             </div>
+        </div>
+         <div id="vopros8" style="display:none">
+              <p style="margin: 0rem">Вопрос 8</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_8"></span> <input class="form-control" type="text"  id="z_8"></p>
+             </div>
+        </div>
+         <div id="vopros9" style="display:none">
+              <p style="margin: 0rem">Вопрос 9</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_9"></span> <input class="form-control" type="text"  id="z_9"></p>
+             </div>
+        </div>
+         <div id="vopros10" style="display:none">
+              <p style="margin: 0rem">Вопрос 10</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_10"></span> <input class="form-control" type="text"  id="z_10"></p>
+             </div>
+        </div>
+         <div id="vopros11" style="display:none">
+              <p style="margin: 0rem">Вопрос 11</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_11"></span> <input class="form-control" type="text"  id="z_11"></p>
+             </div>
+        </div>
+         <div id="vopros12" style="display:none">
+              <p style="margin: 0rem">Вопрос 12</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_12"></span> <input class="form-control" type="text"  id="z_12"></p>
+             </div>
+        </div>
+         <div id="vopros13" style="display:none">
+              <p style="margin: 0rem">Вопрос 13</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_13"></span> <input class="form-control" type="text"  id="z_13"></p>
+             </div>
+        </div>
+         <div id="vopros14" style="display:none">
+              <p style="margin: 0rem">Вопрос 14</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_14"></span> <input class="form-control" type="text"  id="z_14"></p>
+             </div>
+        </div>
+         <div id="vopros15" style="display:none">
+              <p style="margin: 0rem">Вопрос 15</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_15"></span> <input class="form-control" type="text"  id="z_15"></p>
+             </div>
+        </div>
+         <div id="vopros16" style="display:none">
+              <p style="margin: 0rem">Вопрос 16</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_16"></span> <input class="form-control" type="text"  id="z_16"></p>
+             </div>
+        </div>
+         <div id="vopros17" style="display:none">
+              <p style="margin: 0rem">Вопрос 17</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_17"></span> <input class="form-control" type="text"  id="z_17"></p>
+             </div>
+        </div>
+         <div id="vopros18" style="display:none">
+              <p style="margin: 0rem">Вопрос 18</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_18"></span> <input class="form-control" type="text"  id="z_18"></p>
+             </div>
+        </div>
+         <div id="vopros19" style="display:none">
+              <p style="margin: 0rem">Вопрос 19</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_19"></span> <input class="form-control" type="text"  id="z_19"></p>
+             </div>
+        </div>
+         <div id="vopros20" style="display:none">
+              <p style="margin: 0rem">Вопрос 20</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_20"></span> <input class="form-control" type="text"  id="z_20"></p>
+             </div>
+        </div>
+         <div id="vopros21" style="display:none">
+              <p style="margin: 0rem">Вопрос 21</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_21"></span> <input class="form-control" type="text"  id="z_21"></p>
+             </div>
+        </div>
+         <div id="vopros22" style="display:none">
+              <p style="margin: 0rem">Вопрос 22</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_22"></span> <input class="form-control" type="text"  id="z_22"></p>
+             </div>
+        </div>
+         <div id="vopros23" style="display:none">
+              <p style="margin: 0rem">Вопрос 23</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_23"></span> <input class="form-control" type="text"  id="z_23"></p>
+             </div>
+        </div>
+         <div id="vopros24" style="display:none">
+              <p style="margin: 0rem">Вопрос 24</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_24"></span> <input class="form-control" type="text"  id="z_24"></p>
+             </div>
+        </div>
+         <div id="vopros25" style="display:none">
+              <p style="margin: 0rem">Вопрос 25</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_25"></span> <input class="form-control" type="text"  id="z_25"></p>
+             </div>
+        </div>
+         <div id="vopros26" style="display:none">
+              <p style="margin: 0rem">Вопрос 26</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_26"></span> <input class="form-control" type="text"  id="z_26"></p>
+             </div>
+        </div>
+         <div id="vopros27" style="display:none">
+              <p style="margin: 0rem">Вопрос 27</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_27"></span> <input class="form-control" type="text"  id="z_27"></p>
+             </div>
+        </div>
+         <div id="vopros28" style="display:none">
+              <p style="margin: 0rem">Вопрос 28</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_28"></span> <input class="form-control" type="text"  id="z_28"></p>
+             </div>
+        </div>
+         <div id="vopros29" style="display:none">
+              <p style="margin: 0rem">Вопрос 29</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_29"></span> <input class="form-control" type="text"  id="z_29"></p>
+             </div>
+        </div>
+         <div id="vopros30" style="display:none">
+              <p style="margin: 0rem">Вопрос 30</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_30"></span> <input class="form-control" type="text"  id="z_30"></p>
+             </div>
+        </div>
+         <div id="vopros31" style="display:none">
+              <p style="margin: 0rem">Вопрос 31</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_31"></span> <input class="form-control" type="text"  id="z_31"></p>
+             </div>
+        </div>
+         <div id="vopros32" style="display:none">
+              <p style="margin: 0rem">Вопрос 32</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_32"></span> <input class="form-control" type="text"  id="z_32"></p>
+             </div>
+        </div>
+         <div id="vopros33" style="display:none">
+              <p style="margin: 0rem">Вопрос 33</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_33"></span> <input class="form-control" type="text"  id="z_33"></p>
+             </div>
+        </div>
+         <div id="vopros34" style="display:none">
+              <p style="margin: 0rem">Вопрос 34</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_34"></span> <input class="form-control" type="text"  id="z_34"></p>
+             </div>
+        </div>
+         <div id="vopros35" style="display:none">
+              <p style="margin: 0rem">Вопрос 35</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_35"></span> <input class="form-control" type="text"  id="z_35"></p>
+             </div>
+        </div>
+         <div id="vopros36" style="display:none">
+              <p style="margin: 0rem">Вопрос 36</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_36"></span> <input class="form-control" type="text"  id="z_36"></p>
+             </div>
+        </div>
+         <div id="vopros37" style="display:none">
+              <p style="margin: 0rem">Вопрос 37</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_37"></span> <input class="form-control" type="text"  id="z_37"></p>
+             </div>
+        </div>
+         <div id="vopros38" style="display:none">
+              <p style="margin: 0rem">Вопрос 38</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_38"></span> <input class="form-control" type="text"  id="z_38"></p>
+             </div>
+        </div>
+         <div id="vopros39" style="display:none">
+              <p style="margin: 0rem">Вопрос 39</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_39"></span> <input class="form-control" type="text"  id="z_39"></p>
+             </div>
+        </div>
+         <div id="vopros40" style="display:none">
+              <p style="margin: 0rem">Вопрос 40</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_40"></span> <input class="form-control" type="text"  id="z_40"></p>
+             </div>
+        </div>
+         <div id="vopros41" style="display:none">
+              <p style="margin: 0rem">Вопрос 41</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_41"></span> <input class="form-control" type="text"  id="z_41"></p>
+             </div>
+        </div>
+         <div id="vopros42" style="display:none">
+              <p style="margin: 0rem">Вопрос 42</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_42"></span> <input class="form-control" type="text"  id="z_42"></p>
+             </div>
+        </div>
+         <div id="vopros43" style="display:none">
+              <p style="margin: 0rem">Вопрос 43</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_43"></span> <input class="form-control" type="text"  id="z_43"></p>
+             </div>
+        </div>
+         <div id="vopros44" style="display:none">
+              <p style="margin: 0rem">Вопрос 44</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_44"></span> <input class="form-control" type="text"  id="z_44"></p>
+             </div>
+        </div>
+         <div id="vopros45" style="display:none">
+              <p style="margin: 0rem">Вопрос 45</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_45"></span> <input class="form-control" type="text"  id="z_45"></p>
+             </div>
+        </div>
+         <div id="vopros46" style="display:none">
+              <p style="margin: 0rem">Вопрос 46</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_46"></span> <input class="form-control" type="text"  id="z_46"></p>
+             </div>
+        </div>
+         <div id="vopros47" style="display:none">
+              <p style="margin: 0rem">Вопрос 47</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_47"></span> <input class="form-control" type="text"  id="z_47"></p>
+             </div>
+        </div>
+         <div id="vopros48" style="display:none">
+              <p style="margin: 0rem">Вопрос 48</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_48"></span> <input class="form-control" type="text"  id="z_48"></p>
+             </div>
+        </div>
+         <div id="vopros49" style="display:none">
+              <p style="margin: 0rem">Вопрос 49</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_49"></span> <input class="form-control" type="text"  id="z_49"></p>
+             </div>
+        </div>
+        <div id="vopros50" style="display:none">
+              <p style="margin: 0rem">Вопрос 50</p>
+              <div class="alert alert-secondary" role="alert" style="margin-bottom:0rem; height:412px;">
+                   <p><span id="v_50"></span> <input class="form-control" type="text"  id="z_50"></p>
+             </div>
+        </div>		
+		
 
 
- <div id="vopros1" style="display:none;">
-   <p>Вопрос 1</p>
-   <div class="alert alert-secondary" role="alert" ">
-       <p><span id="v_1"></span> <input class="form-control" type="text" id="z_1"></p>
-   </div>
- </div>
-
-<div id="vopros2" style="display:none;">
-<p>Вопрос 2</p>
-<div class="alert alert-secondary" role="alert">
-<p><span id="v_2"></span> <input class="form-control" type="text" id="z_2"></p>
-</div>
-</div>
-
-<div id="vopros3" style="display:none;">
-<p>Вопрос 3</p>
-<div class="alert alert-secondary" role="alert">
-<p><span id="v_3"></span> <input class="form-control" type="text" id="z_3"></p>
-</div>
-</div>
-
-<div id="vopros4" style="display:none;">
-<p>Вопрос 4</p>
-<div class="alert alert-secondary" role="alert">
-<p><span id="v_4"></span> <input class="form-control" type="text" id="z_4"></p>
-</div>
-</div>
-
-<div id="vopros5" style="display:none;">
-<p>Вопрос 5</p>
-<div class="alert alert-secondary" role="alert" ">
-<p><span id="v_5"></span> <input class="form-control" type="text" id="z_5"></p>
-</div>
-</div>
-
-<div id="vopros6" style="display:none;">
-<p>Вопрос 6</p>
-<div class="alert alert-secondary" role="alert">
-<p><span id="v_6"></span> <input class="form-control" type="text" id="z_6"></p>
-</div>
-</div>
-
-<div id="vopros7" style="display:none;">
-<p>Вопрос 7</p>
-<div class="alert alert-secondary" role="alert">
-<p><span id="v_7"></span> <input class="form-control" type="text" id="z_7"></p>
-</div>
-</div>
-
-<div id="vopros8" style="display:none;">
-<p>Вопрос 8</p>
-<div class="alert alert-secondary" role="alert">
-<p><span id="v_8"></span> <input class="form-control" type="text" id="z_8"></p>
-</div>
-</div>
-
-
-
-<div id="vopros9" style="display:none;">
-<p>Вопрос 9</p>
-<div class="alert alert-secondary" role="alert">
-<p><span id="v_9"></span> <input class="form-control" type="text" id="z_9"></p>
-</div>
-</div>
-
-<!--<div id="vopros10" style="display:none;">
-<p>Вопрос 10</p>
-<div class="alert alert-secondary" role="alert">
-<p><span id="v_10"></span> <input class="form-control" type="text" id="z_10"></p>
-</div>
-</div>    -->
 
 <button id="kn_sl" class="btn btn-lg btn-primary btn-block" style="margin-left:auto;margin-right:auto;display:none;width:250px;" onclick="sled_vopr();">Следующий вопрос</button>
-<button id="kn_pr" class="btn btn-lg btn-primary btn-block" style="margin-left:auto;margin-right:auto;display:none;width:250px;" onclick="proverit();">Проверить</button>
-<div id="rezultat"></div>
+<button id="kn_pr" class="btn btn-lg btn-primary btn-block" style="margin-left:auto;margin-right:auto; margin-top:0px;display:none;width:250px;" onclick="proverit();">Проверить</button>
+<div id="rezultat" ></div>
 </div>
 </div>
 
 <script>
-
+//************************************************************************************************************************************
 function ActiveStart() {              //функция активности/неавтивности кнопки НАЧАТЬ в зависимости от нулей в окнах
 
+  
+  
    if ((document.getElementById('kol1').valueAsNumber == "0" ) && (document.getElementById('kol2').valueAsNumber == "0" )  &&
-   (document.getElementById('kol3').valueAsNumber == "0" ))
+       (document.getElementById('kol3').valueAsNumber == "0" ) && (document.getElementById('kol4').valueAsNumber == "0" )  &&
+       (document.getElementById('kol5').valueAsNumber == "0" ) && (document.getElementById('kol6').valueAsNumber == "0" )  &&
+       (document.getElementById('kol7').valueAsNumber == "0" ) && (document.getElementById('kol8').valueAsNumber == "0" )  &&
+       (document.getElementById('kol9').valueAsNumber == "0" ) && (document.getElementById('kol10').valueAsNumber == "0" )  &&
+       (document.getElementById('kol11').valueAsNumber == "0" ) && (document.getElementById('kol12').valueAsNumber == "0" )  && 
+       (document.getElementById('kol13').valueAsNumber == "0" ) && (document.getElementById('kol14').valueAsNumber == "0" )  &&
+       (document.getElementById('kol15').valueAsNumber == "0" ) && (document.getElementById('kol16').valueAsNumber == "0" )  &&
+       (document.getElementById('kol17').valueAsNumber == "0" ) && (document.getElementById('kol18').valueAsNumber == "0" )  &&
+       (document.getElementById('kol19').valueAsNumber == "0" ) && (document.getElementById('kol20').valueAsNumber == "0" )  &&
+	   (document.getElementById('kol21').valueAsNumber == "0" ) && (document.getElementById('kol22').valueAsNumber == "0" )  &&
+	   (document.getElementById('kol23').valueAsNumber == "0" ) && (document.getElementById('kol24').valueAsNumber == "0" )  &&
+	   (document.getElementById('kol25').valueAsNumber == "0" ) && (document.getElementById('kol26').valueAsNumber == "0" )  &&
+       (document.getElementById('kol27').valueAsNumber == "0" ))
    {
    
      document.getElementById('play').style.color="gray";
@@ -166,136 +585,726 @@ function ActiveStart() {              //функция активности/не
 kol1.onchange = ActiveStart;
 kol2.onchange = ActiveStart;
 kol3.onchange = ActiveStart;
-
-
+kol4.onchange = ActiveStart;
+kol5.onchange = ActiveStart;
+kol6.onchange = ActiveStart;
+kol7.onchange = ActiveStart;
+kol8.onchange = ActiveStart;
+kol9.onchange = ActiveStart;
+kol10.onchange = ActiveStart;
+kol11.onchange = ActiveStart;
+kol12.onchange = ActiveStart;
+kol13.onchange = ActiveStart;
+kol14.onchange = ActiveStart;
+kol15.onchange = ActiveStart;
+kol16.onchange = ActiveStart;
+kol17.onchange = ActiveStart;
+kol18.onchange = ActiveStart;
+kol19.onchange = ActiveStart;
+kol20.onchange = ActiveStart;
+kol21.onchange = ActiveStart;
+kol22.onchange = ActiveStart;
+kol23.onchange = ActiveStart;
+kol24.onchange = ActiveStart;
+kol25.onchange = ActiveStart;
+kol26.onchange = ActiveStart;
+kol27.onchange = ActiveStart;
 
 
 document.addEventListener('DOMContentLoaded', function(){     //при загрузке страницы присвоить значения 0, иначе 0 не воспринимается
-   // Ваш скрипт
-   document.getElementById('kol1').value="0";
-   document.getElementById('kol2').value="0";
-   document.getElementById('kol3').value="0";
-   document.getElementById('play').style.color="grey";
-   document.getElementById('play').setAttribute("disabled","disabled"); 
+
+    kol1.setAttribute("max",kol_zad_vbase1);                  //ограничеваем максимальное значение в input ах 
+	kol2.setAttribute("max",kol_zad_vbase2);
+	kol3.setAttribute("max",kol_zad_vbase3);
+	kol4.setAttribute("max",kol_zad_vbase4);
+	kol5.setAttribute("max",kol_zad_vbase5);
+	kol6.setAttribute("max",kol_zad_vbase6);
+	kol7.setAttribute("max",kol_zad_vbase7);
+	kol8.setAttribute("max",kol_zad_vbase8);
+	kol9.setAttribute("max",kol_zad_vbase9);
+	kol10.setAttribute("max",kol_zad_vbase10);
+	kol11.setAttribute("max",kol_zad_vbase11);
+	kol12.setAttribute("max",kol_zad_vbase12);
+	kol13.setAttribute("max",kol_zad_vbase13);
+	kol14.setAttribute("max",kol_zad_vbase14);
+	kol15.setAttribute("max",kol_zad_vbase15);
+	kol16.setAttribute("max",kol_zad_vbase16);
+	kol17.setAttribute("max",kol_zad_vbase17);
+	kol18.setAttribute("max",kol_zad_vbase18);
+	kol19.setAttribute("max",kol_zad_vbase19);
+	kol20.setAttribute("max",kol_zad_vbase20);
+	kol21.setAttribute("max",kol_zad_vbase21);
+	kol22.setAttribute("max",kol_zad_vbase22);
+	kol23.setAttribute("max",kol_zad_vbase23);
+	kol24.setAttribute("max",kol_zad_vbase24);
+	kol25.setAttribute("max",kol_zad_vbase25);
+    kol26.setAttribute("max",kol_zad_vbase26);
+	kol27.setAttribute("max",kol_zad_vbase27);
+	
+document.getElementById('kolich').value = 0;   //задаем значение какое текущее задание
+document.getElementById('kolich').style.display='none';
+    
+document.getElementById('kol1').value="0";
+document.getElementById('kol2').value="0";
+document.getElementById('kol3').value="0";
+document.getElementById('kol4').value="0";
+document.getElementById('kol5').value="0";
+document.getElementById('kol6').value="0";
+document.getElementById('kol7').value="0";
+document.getElementById('kol8').value="0";
+document.getElementById('kol9').value="0";
+document.getElementById('kol10').value="0";
+document.getElementById('kol11').value="0";
+document.getElementById('kol12').value="0";
+document.getElementById('kol13').value="0";
+document.getElementById('kol14').value="0";
+document.getElementById('kol15').value="0";
+document.getElementById('kol16').value="0";
+document.getElementById('kol17').value="0";
+document.getElementById('kol18').value="0";
+document.getElementById('kol19').value="0";
+document.getElementById('kol20').value="0";
+document.getElementById('kol21').value="0";
+document.getElementById('kol22').value="0";
+document.getElementById('kol23').value="0";
+document.getElementById('kol24').value="0";
+document.getElementById('kol25').value="0";
+document.getElementById('kol26').value="0";
+document.getElementById('kol27').value="0";
+
+document.getElementById('play').style.color="grey";
+document.getElementById('play').setAttribute("disabled","disabled"); 
    
 });
+
+//**************************************************************************************************************************************
+function voiti(){
+    var k = 0;
+    id=document.getElementById('idNomer').value;
+    for (var i=0; i<=(identificatori.length-1); i++) {
+	     if (id == identificatori[i][0]) {
+		     document.getElementById('identification').value =  identificatori[i][1];
+		     document.getElementById('identification').style.display="none";
+			 document.getElementById('LabelZad1').style.display="block";
+		 } 
+		 else { k = +k + + 1
+		 }
+	}
+	if (k ==identificatori.length) {
+	  alert('Пользователя с таким идентификатором не существует!')
+	}
+}
+
+
 //*************************************************************************************************************************************
 function nachat(){
-  kol_zad_vbase1=10;    
-  kol_zad_vbase2=10;
-  kol_zad_vbase3=10;
+  document.getElementById('kolich').value = 1;
+
   inpKol1=document.getElementById('kol1').valueAsNumber;
   inpKol2=document.getElementById('kol2').valueAsNumber;
   inpKol3=document.getElementById('kol3').valueAsNumber;
-  inpKol=+inpKol1+ +inpKol2+ +inpKol3;     //количество заданий из формы
+  inpKol4=document.getElementById('kol4').valueAsNumber;
+  inpKol5=document.getElementById('kol5').valueAsNumber;
+  inpKol6=document.getElementById('kol6').valueAsNumber;
+  inpKol7=document.getElementById('kol7').valueAsNumber;
+  inpKol8=document.getElementById('kol8').valueAsNumber;
+  inpKol9=document.getElementById('kol9').valueAsNumber;
+  
+  inpKol10=document.getElementById('kol10').valueAsNumber;
+  inpKol11=document.getElementById('kol11').valueAsNumber;
+  inpKol12=document.getElementById('kol12').valueAsNumber;
+  inpKol13=document.getElementById('kol13').valueAsNumber;
+  inpKol14=document.getElementById('kol14').valueAsNumber;
+  inpKol15=document.getElementById('kol15').valueAsNumber;
+  inpKol16=document.getElementById('kol16').valueAsNumber;
+  inpKol17=document.getElementById('kol17').valueAsNumber;
+  inpKol18=document.getElementById('kol18').valueAsNumber;
+  inpKol19=document.getElementById('kol19').valueAsNumber;
+  
+  inpKol20=document.getElementById('kol20').valueAsNumber;
+  inpKol21=document.getElementById('kol21').valueAsNumber;
+  inpKol22=document.getElementById('kol22').valueAsNumber;
+  inpKol23=document.getElementById('kol23').valueAsNumber;
+  inpKol24=document.getElementById('kol24').valueAsNumber;
+  inpKol25=document.getElementById('kol25').valueAsNumber;
+  inpKol26=document.getElementById('kol26').valueAsNumber;
+  inpKol27=document.getElementById('kol27').valueAsNumber;
+
+  inpKol=+inpKol1+ +inpKol2+ +inpKol3+ +inpKol4+ +inpKol5+ +inpKol6+ +inpKol7+ +inpKol8+ +inpKol9+ +inpKol10+ +inpKol11+ +inpKol12+ +inpKol13+ +inpKol14+ +inpKol15+ +inpKol6+ +inpKol17+ +inpKol18+ +inpKol19+ +inpKol20+ +inpKol21+ +inpKol22+ +inpKol23+ +inpKol24+ +inpKol25+ +inpKol26+ +inpKol27 ;     //количество заданий из формы
   
   masvopr1=[];    // заполняем массив именами подгружаемых картинок
   for ( var i = 0; i <= kol_zad_vbase1-1; i++){
-	   masvopr1[i]="<img src='data/01/01_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+       masvopr1[i]=[];
+	   masvopr1[i][0]="<img src='data/01/01_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr1[i][1] = "01_" + (i+1);
   }
 	
   masvopr2=[];    // заполняем массив именами подгружаемых картинок	
   for ( var i = 0; i <=kol_zad_vbase2-1; i++){
-	   masvopr2[i]="<img src='data/02/02_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+       masvopr2[i]=[];
+	   masvopr2[i][0]="<img src='data/02/02_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr2[i][1] = "02_" + (i+1);
   }
 
   masvopr3=[];    // заполняем массив именами подгружаемых картинок	
   for ( var i = 0; i <=kol_zad_vbase3-1; i++){
-	   masvopr3[i]="<img src='data/03/03_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+       masvopr3[i]=[];
+	   masvopr3[i][0]="<img src='data/03/03_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr3[i][1] = "03_" + (i+1);
+  }
+ 
+  masvopr4=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase4-1; i++){
+       masvopr4[i]=[];
+	   masvopr4[i][0]="<img src='data/04/04_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr4[i][1] = "04_" + (i+1);
+  }
+  
+  masvopr5=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase5-1; i++){
+       masvopr5[i]=[];
+	   masvopr5[i][0]="<img src='data/05/05_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr5[i][1] = "05_" + (i+1);
+  }
+  masvopr6=[];    // заполняем массив именами подгружаемых картинок
+  for ( var i = 0; i <= kol_zad_vbase6-1; i++){
+       masvopr6[i]=[];
+	   masvopr6[i][0]="<img src='data/06/06_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr6[i][1] = "06_" + (i+1);
+  }
+	
+  masvopr7=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase7-1; i++){
+       masvopr7[i]=[];
+	   masvopr7[i][0]="<img src='data/07/07_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr7[i][1] = "07_" + (i+1);
   }
 
-//*****************************************************************************************************************************************************
+  masvopr8=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase8-1; i++){
+       masvopr8[i]=[];
+	   masvopr8[i][0]="<img src='data/08/08_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr8[i][1] = "08_" + (i+1);
+  }
+ 
+  masvopr9=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase9-1; i++){
+       masvopr9[i]=[];
+	   masvopr9[i][0]="<img src='data/09/09_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr9[i][1] = "09_" + (i+1);
+  }
+  
+  masvopr10=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase10-1; i++){
+       masvopr10[i]=[];
+	   masvopr10[i][0]="<img src='data/10/10_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr10[i][1] = "10_" + (i+1);
+  }
+  
+  masvopr11=[];    // заполняем массив именами подгружаемых картинок
+  for ( var i = 0; i <= kol_zad_vbase11-1; i++){
+       masvopr11[i]=[];
+	   masvopr11[i][0]="<img src='data/11/11_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr11[i][1] = "11_" + (i+1);
+  }
+	
+  masvopr12=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase12-1; i++){
+       masvopr12[i]=[];
+	   masvopr12[i][0]="<img src='data/12/12_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr12[i][1] = "12_" + (i+1);
+  }
+
+  masvopr13=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase13-1; i++){
+       masvopr13[i]=[];
+	   masvopr13[i][0]="<img src='data/13/13_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr13[i][1] = "13_" + (i+1);
+  }
+ 
+  masvopr14=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase14-1; i++){
+       masvopr14[i]=[];
+	   masvopr14[i][0]="<img src='data/14/14_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr14[i][1] = "14_" + (i+1);
+  }
+  
+  masvopr15=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase15-1; i++){
+       masvopr15[i]=[];
+	   masvopr15[i][0]="<img src='data/15/15_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr15[i][1] = "15_" + (i+1);
+  }
+  masvopr16=[];    // заполняем массив именами подгружаемых картинок
+  for ( var i = 0; i <= kol_zad_vbase16-1; i++){
+       masvopr16[i]=[];
+	   masvopr16[i][0]="<img src='data/16/16_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr16[i][1] = "16_" + (i+1);
+  }
+	
+  masvopr17=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase17-1; i++){
+       masvopr17[i]=[];
+	   masvopr17[i][0]="<img src='data/17/17_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr17[i][1] = "17_" + (i+1);
+  }
+
+  masvopr18=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase18-1; i++){
+       masvopr18[i]=[];
+	   masvopr18[i][0]="<img src='data/18/18_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr18[i][1] = "18_" + (i+1);
+  }
+ 
+  masvopr19=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase19-1; i++){
+	  masvopr19[i]=[];
+      masvopr19[i][0]="<img src='data/19/19_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	  masvopr19[i][1] = "19_" + (i+1);
+  }
+  
+  masvopr20=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase20-1; i++){
+       masvopr20[i]=[];
+	   masvopr20[i][0]="<img src='data/20/20_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr20[i][1] = "20_" + (i+1);
+  }
+   masvopr21=[];    // заполняем массив именами подгружаемых картинок
+  for ( var i = 0; i <= kol_zad_vbase21-1; i++){
+       masvopr21[i]=[];
+	   masvopr21[i][0]="<img src='data/21/21_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr21[i][1] = "21_" + (i+1);
+  }
+	
+  masvopr22=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase22-1; i++){
+       masvopr22[i]=[];
+	   masvopr22[i][0]="<img src='data/22/22_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr22[i][1] = "22_" + (i+1);
+  }
+
+  masvopr23=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase23-1; i++){
+       masvopr23[i]=[];
+	   masvopr23[i][0]="<img src='data/23/23_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr23[i][1] = "23_" + (i+1);
+  }
+ 
+  masvopr24=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase24-1; i++){
+       masvopr24[i]=[];
+	   masvopr24[i][0]="<img src='data/24/24_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr24[i][1] = "24_" + (i+1);
+  }
+  
+  masvopr25=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase25-1; i++){
+       masvopr25[i]=[];
+	   masvopr25[i][0]="<img src='data/25/25_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr25[i][1] = "25_" + (i+1);
+  }
+  masvopr26=[];    // заполняем массив именами подгружаемых картинок
+  for ( var i = 0; i <= kol_zad_vbase26-1; i++){
+       masvopr26[i]=[];
+	   masvopr26[i][0]="<img src='data/26/26_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr26[i][1] = "26_" + (i+1);
+  }
+	
+  masvopr27=[];    // заполняем массив именами подгружаемых картинок	
+  for ( var i = 0; i <=kol_zad_vbase27-1; i++){
+       masvopr27[i]=[];
+	   masvopr27[i][0]="<img src='data/27/27_" + (i+1) + ".jpg' class='rounded mx-auto d-block'>";
+	   masvopr27[i][1] = "27_" + (i+1);
+  }
+//************************************************************************************************************************     I
   voprosi=[]     //формируем мссив с картинками и правильными ответами
   for ( var j = 0; j <= (kol_zad_vbase1-1); j++) {
      voprosi[j] = [];
-     voprosi[j][0] = masvopr1[j]; 
+     voprosi[j][0] = masvopr1[j][0]; 
      voprosi[j][1] = pr_otv_zadachi1[j];
+	 voprosi[j][2] = masvopr1[j][1];
   }
-	
-  if(peremeshat_voprosi == "да"){         //перемешиваем часть с первыми заданиями
-     voprosi = peremeshat_vse_voprosi(voprosi,0,kol_zad_vbase1-1);
-  }
-   voprosi.splice(inpKol1);      //удаляем ненужные первые задания
- //*******************************************************************************************************************************************
-  
-  for ( var j = 0; j <= (kol_zad_vbase2-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
-	 voprosi[j+inpKol1] = [];
-	 voprosi[j+inpKol1][0] = masvopr2[j]; 
-	 voprosi[j+inpKol1][1] = pr_otv_zadachi2[j];
-  }  
-
-  if(peremeshat_voprosi == "да"){                    //перемешиваем
-     voprosi = peremeshat_vse_voprosi(voprosi,inpKol1,inpKol1+kol_zad_vbase2-1);
-		 
-   voprosi.splice(inpKol1+inpKol2);      //удаляем ненужные вторые задания
+     voprosi = peremeshat_vse_voprosi(voprosi,0,kol_zad_vbase1-1);        //перемешиваем часть с первыми заданиями
+     voprosi.splice(inpKol1);      //удаляем ненужные первые задания
+ //***********************************************************************************************************************    II
+    sumKolbez1 = inpKol1;
+    for ( var j = 0; j <= (kol_zad_vbase2-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	    voprosi[j+inpKol1] = [];
+	    voprosi[j+inpKol1][0] = masvopr2[j][0]; 
+	    voprosi[j+inpKol1][1] = pr_otv_zadachi2[j];
+		voprosi[j+inpKol1][2] = masvopr2[j][1];
+    }  
+    voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase2-1);
+	voprosi.splice(sumKolbez1+inpKol2);      //удаляем ненужные вторые задания
    
-//**********************************************************************************************************************************************
-	  for ( var j = 0; j <= (kol_zad_vbase3-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
-	 voprosi[j+inpKol1+inpKol2] = [];
-	 voprosi[j+inpKol1+inpKol2][0] = masvopr3[j]; 
-	 voprosi[j+inpKol1+inpKol2][1] = pr_otv_zadachi3[j];
+//***************************************************************************************************************************    III
+	 sumKolbez1 = sumKolbez1+inpKol2;
+	 for ( var j = 0; j <= (kol_zad_vbase3-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr3[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi3[j];
+		  voprosi[j+sumKolbez1][2] = masvopr3[j][1];
   }  
-
-  if(peremeshat_voprosi == "да"){                    //перемешиваем
-     voprosi = peremeshat_vse_voprosi(voprosi,inpKol1+inpKol2,inpKol1+inpKol2+kol_zad_vbase3-1);}
-		 
-   voprosi.splice(inpKol1+inpKol2+inpKol3);      //удаляем ненужные вторые задания
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase3-1);
+	 voprosi.splice(sumKolbez1+inpKol3);      //удаляем ненужные вторые задания
+	 
+//***************************************************************************************************************************    IV
+	 sumKolbez1 = sumKolbez1+inpKol3;
+	 for ( var j = 0; j <= (kol_zad_vbase4-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr4[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi4[j];
+		  voprosi[j+sumKolbez1][2] = masvopr4[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase4-1);
+	 voprosi.splice(sumKolbez1+inpKol4);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    V
+	 sumKolbez1 = sumKolbez1+inpKol4;
+	 for ( var j = 0; j <= (kol_zad_vbase5-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr5[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi5[j];
+		  voprosi[j+sumKolbez1][2] = masvopr5[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase5-1);
+	 voprosi.splice(sumKolbez1+inpKol5);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    VI
+	sumKolbez1 = sumKolbez1+inpKol5;
+	 for ( var j = 0; j <= (kol_zad_vbase6-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr6[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi6[j];
+		  voprosi[j+sumKolbez1][2] = masvopr6[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase6-1);
+	 voprosi.splice(sumKolbez1+inpKol6);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    VII
+	sumKolbez1 = sumKolbez1+inpKol6;
+	 for ( var j = 0; j <= (kol_zad_vbase7-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr7[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi7[j];
+		  voprosi[j+sumKolbez1][2] = masvopr7[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase7-1);
+	 voprosi.splice(sumKolbez1+inpKol7);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    VIII
+	 sumKolbez1 = sumKolbez1+inpKol7;
+	 for ( var j = 0; j <= (kol_zad_vbase8-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr8[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi8[j];
+		  voprosi[j+sumKolbez1][2] = masvopr8[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase8-1);
+	 voprosi.splice(sumKolbez1+inpKol8);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    IX
+	 sumKolbez1 = sumKolbez1+inpKol8;
+	 for ( var j = 0; j <= (kol_zad_vbase9-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr9[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi9[j];
+		  voprosi[j+sumKolbez1][2] = masvopr9[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase9-1);
+	 voprosi.splice(sumKolbez1+inpKol9);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    X
+     sumKolbez1 = sumKolbez1+inpKol9;
+	 for ( var j = 0; j <= (kol_zad_vbase10-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr10[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi10[j];
+		  voprosi[j+sumKolbez1][2] = masvopr10[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase10-1);
+	 voprosi.splice(sumKolbez1+inpKol10);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XI
+	 sumKolbez1 = sumKolbez1+inpKol10;
+	 for ( var j = 0; j <= (kol_zad_vbase11-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr11[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi11[j];
+		  voprosi[j+sumKolbez1][2] = masvopr11[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase11-1);
+	 voprosi.splice(sumKolbez1+inpKol11);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XII
+	 sumKolbez1 = sumKolbez1+inpKol11;
+	 for ( var j = 0; j <= (kol_zad_vbase12-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr12[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi12[j];
+		  voprosi[j+sumKolbez1][2] = masvopr12[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase12-1);
+	 voprosi.splice(sumKolbez1+inpKol12);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XIII
+	 sumKolbez1 = sumKolbez1+inpKol12;
+	 for ( var j = 0; j <= (kol_zad_vbase13-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr13[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi13[j];
+		  voprosi[j+sumKolbez1][2] = masvopr13[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase13-1);
+	 voprosi.splice(sumKolbez1+inpKol13);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XIV
+	 sumKolbez1 = sumKolbez1+inpKol13;
+	 for ( var j = 0; j <= (kol_zad_vbase14-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr14[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi14[j];
+		  voprosi[j+sumKolbez1][2] = masvopr14[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase14-1);
+	 voprosi.splice(sumKolbez1+inpKol14);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XV
+	sumKolbez1 = sumKolbez1+inpKol14;
+	 for ( var j = 0; j <= (kol_zad_vbase15-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr15[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi15[j];
+		  voprosi[j+sumKolbez1][2] = masvopr15[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase15-1);
+	 voprosi.splice(sumKolbez1+inpKol15);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XVI
+	 sumKolbez1 = sumKolbez1+inpKol15;
+	 for ( var j = 0; j <= (kol_zad_vbase16-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr16[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi16[j];
+		  voprosi[j+sumKolbez1][2] = masvopr16[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase16-1);
+	 voprosi.splice(sumKolbez1+inpKol16);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XVII
+	 sumKolbez1 = sumKolbez1+inpKol16;
+	 for ( var j = 0; j <= (kol_zad_vbase17-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr17[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi17[j];
+		  voprosi[j+sumKolbez1][2] = masvopr17[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase17-1);
+	 voprosi.splice(sumKolbez1+inpKol17);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XVIII
+	sumKolbez1 = sumKolbez1+inpKol17;
+	 for ( var j = 0; j <= (kol_zad_vbase18-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr18[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi18[j];
+		  voprosi[j+sumKolbez1][2] = masvopr18[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase18-1);
+	 voprosi.splice(sumKolbez1+inpKol18);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XIX
+	 sumKolbez1 = sumKolbez1+inpKol8;
+	 for ( var j = 0; j <= (kol_zad_vbase19-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr19[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi19[j];
+		  voprosi[j+sumKolbez1][2] = masvopr19[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase19-1);
+	 voprosi.splice(sumKolbez1+inpKol19);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XX
+	sumKolbez1 = sumKolbez1+inpKol19;
+	 for ( var j = 0; j <= (kol_zad_vbase20-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr20[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi20[j];
+		  voprosi[j+sumKolbez1][2] = masvopr20[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase20-1);
+	 voprosi.splice(sumKolbez1+inpKol20);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XXI
+	sumKolbez1 = sumKolbez1+inpKol20;
+	 for ( var j = 0; j <= (kol_zad_vbase21-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr21[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi21[j];
+		  voprosi[j+sumKolbez1][2] = masvopr21[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase21-1);
+	 voprosi.splice(sumKolbez1+inpKol21);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XXII
+	 sumKolbez1 = sumKolbez1+inpKol21;
+	 for ( var j = 0; j <= (kol_zad_vbase22-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr22[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi22[j];
+		  voprosi[j+sumKolbez1][2] = masvopr22[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase22-1);
+	 voprosi.splice(sumKolbez1+inpKol22);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XXIII
+	 sumKolbez1 = sumKolbez1+inpKol22;
+	 for ( var j = 0; j <= (kol_zad_vbase23-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr23[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi23[j];
+		  voprosi[j+sumKolbez1][2] = masvopr23[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase23-1);
+	 voprosi.splice(sumKolbez1+inpKol23);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XXIV
+	 sumKolbez1 = sumKolbez1+inpKol23;
+	 for ( var j = 0; j <= (kol_zad_vbase24-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr24[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi24[j]
+		  voprosi[j+sumKolbez1][2] = masvopr24[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase24-1);
+	 voprosi.splice(sumKolbez1+inpKol24);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XXV
+	 sumKolbez1 = sumKolbez1+inpKol24;
+	 for ( var j = 0; j <= (kol_zad_vbase25-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr25[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi25[j];
+		  voprosi[j+sumKolbez1][2] = masvopr25[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase25-1);
+	 voprosi.splice(sumKolbez1+inpKol25);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XVI
+	 sumKolbez1 = sumKolbez1+inpKol25;
+	 for ( var j = 0; j <= (kol_zad_vbase26-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr26[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi26[j];
+		  voprosi[j+sumKolbez1][2] = masvopr26[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase26-1);
+	 voprosi.splice(sumKolbez1+inpKol26);      //удаляем ненужные вторые задания
+	 //***************************************************************************************************************************    XVII
+	 sumKolbez1 = sumKolbez1+inpKol26;
+	 for ( var j = 0; j <= (kol_zad_vbase27-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
+	      voprosi[j+sumKolbez1] = [];
+	      voprosi[j+sumKolbez1][0] = masvopr27[j][0]; 
+	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi27[j];
+		  voprosi[j+sumKolbez1][2] = masvopr27[j][1];
+  }  
+     voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase27-1);
+	 voprosi.splice(sumKolbez1+inpKol27);      //удаляем ненужные вторые задания
+	 	 
 	 
 	 
-	 
-	 
-  }
  //***************************************************************************************************************************************************
   for ( var i = 1; i <=(inpKol); i++){
       document.getElementById('v_'+i).innerHTML = voprosi[i-1][0];
   }
  
-  document.getElementById('tema').innerHTML = test;
-
   document.getElementById('vopros1').style.display = "block";
   document.getElementById('kn_sl').style.display = "block";
-  document.getElementById('LabeZad1').style.display = "none";
+  document.getElementById('LabelZad1').style.display = "none";
 
 if (inpKol == 1) {                                                  //если заданий всего одно, то сразу кнопку проверить
      document.getElementById('kn_sl').style.display = "none";
      document.getElementById('kn_pr').style.display = "block";
  	
   }
+document.getElementById('panel').style.display = "block";           //отображаем панель слева и кнопки для переключения между вопросами
+for ( var i = 1; i <=(inpKol); i++){
+     document.getElementById('knopkaVopros'+i).style.display = "block";
+}
 
 }
 
 //*************************************************************************************************************************************
-function sled_vopr(){       // отображение кнопок и заданий на экране
-    inpKol1=document.getElementById('kol1').value;
-	inpKol2=document.getElementById('kol2').value;
-	inpKol3=document.getElementById('kol3').value;
-	inpKol=+inpKol1+ +inpKol2+ + inpKol3;     //количество заданий из формы
+function sled_vopr(){       // отображениеnumberZad=document.getElementById('kolich').value; кнопок и заданий на экране
+	numberZad=document.getElementById('kolich').value;
+	numberZad=+numberZad+ +1;
+    document.getElementById('kolich').value = numberZad;
+	
+   inpKol1=document.getElementById('kol1').valueAsNumber;
+  inpKol2=document.getElementById('kol2').valueAsNumber;
+  inpKol3=document.getElementById('kol3').valueAsNumber;
+  inpKol4=document.getElementById('kol4').valueAsNumber;
+  inpKol5=document.getElementById('kol5').valueAsNumber;
+  inpKol6=document.getElementById('kol6').valueAsNumber;
+  inpKol7=document.getElementById('kol7').valueAsNumber;
+  inpKol8=document.getElementById('kol8').valueAsNumber;
+  inpKol9=document.getElementById('kol9').valueAsNumber;
+  
+  inpKol10=document.getElementById('kol10').valueAsNumber;
+  inpKol11=document.getElementById('kol11').valueAsNumber;
+  inpKol12=document.getElementById('kol12').valueAsNumber;
+  inpKol13=document.getElementById('kol13').valueAsNumber;
+  inpKol14=document.getElementById('kol14').valueAsNumber;
+  inpKol15=document.getElementById('kol15').valueAsNumber;
+  inpKol16=document.getElementById('kol16').valueAsNumber;
+  inpKol17=document.getElementById('kol17').valueAsNumber;
+  inpKol18=document.getElementById('kol18').valueAsNumber;
+  inpKol19=document.getElementById('kol19').valueAsNumber;
+  
+  inpKol20=document.getElementById('kol20').valueAsNumber;
+  inpKol21=document.getElementById('kol21').valueAsNumber;
+  inpKol22=document.getElementById('kol22').valueAsNumber;
+  inpKol23=document.getElementById('kol23').valueAsNumber;
+  inpKol24=document.getElementById('kol24').valueAsNumber;
+  inpKol25=document.getElementById('kol25').valueAsNumber;
+  inpKol26=document.getElementById('kol26').valueAsNumber;
+  inpKol27=document.getElementById('kol27').valueAsNumber;
+
+  inpKol=+inpKol1+ +inpKol2+ +inpKol3+ +inpKol4+ +inpKol5+ +inpKol6+ +inpKol7+ +inpKol8+ +inpKol9+ +inpKol10+ +inpKol11+ +inpKol12+ +inpKol13+ +inpKol14+ +inpKol15+ +inpKol6+ +inpKol17+ +inpKol18+ +inpKol19+ +inpKol20+ +inpKol21+ +inpKol22+ +inpKol23+ +inpKol24+ +inpKol25+ +inpKol26+ +inpKol27 ;     //количество заданий из формы
+  
 	
     
-	 if(document.getElementById('vopros'+(inpKol-1)).style.display == "block"){
+	if (numberZad == inpKol){
          document.getElementById('vopros'+(inpKol-1)).style.display = "none";
          document.getElementById('vopros'+inpKol).style.display = "block";
 	     document.getElementById('kn_sl').style.display = "none";
          document.getElementById('kn_pr').style.display = "block";
       }
-	 for ( var i = inpKol-2; i => 1; i--){
-         if(document.getElementById('vopros'+i).style.display == "block"){
-                  document.getElementById('vopros'+i).style.display = "none";
-                  document.getElementById('vopros'+(i+1)).style.display = "block";
+	  else {
+                  document.getElementById('vopros'+(numberZad-1)).style.display = 'none';
+                  document.getElementById('vopros'+(numberZad)).style.display = "block";
           }
-	 }
+	
+ }
     
-}
 //*************************************************************************************************************************************
 
 
 
 //****************************************************************************************************************
 function proverit(){
-    inpKol1=document.getElementById('kol1').value;
-	inpKol2=document.getElementById('kol2').value;
-	inpKol3=document.getElementById('kol3').value;
-	inpKol=+inpKol1+ +inpKol2+ +inpKol3;     //количество заданий из формы
+    document.getElementById('panel').style.display = "none";
+
+    inpKol1=document.getElementById('kol1').valueAsNumber;
+  inpKol2=document.getElementById('kol2').valueAsNumber;
+  inpKol3=document.getElementById('kol3').valueAsNumber;
+  inpKol4=document.getElementById('kol4').valueAsNumber;
+  inpKol5=document.getElementById('kol5').valueAsNumber;
+  inpKol6=document.getElementById('kol6').valueAsNumber;
+  inpKol7=document.getElementById('kol7').valueAsNumber;
+  inpKol8=document.getElementById('kol8').valueAsNumber;
+  inpKol9=document.getElementById('kol9').valueAsNumber;
+  
+  inpKol10=document.getElementById('kol10').valueAsNumber;
+  inpKol11=document.getElementById('kol11').valueAsNumber;
+  inpKol12=document.getElementById('kol12').valueAsNumber;
+  inpKol13=document.getElementById('kol13').valueAsNumber;
+  inpKol14=document.getElementById('kol14').valueAsNumber;
+  inpKol15=document.getElementById('kol15').valueAsNumber;
+  inpKol16=document.getElementById('kol16').valueAsNumber;
+  inpKol17=document.getElementById('kol17').valueAsNumber;
+  inpKol18=document.getElementById('kol18').valueAsNumber;
+  inpKol19=document.getElementById('kol19').valueAsNumber;
+  
+  inpKol20=document.getElementById('kol20').valueAsNumber;
+  inpKol21=document.getElementById('kol21').valueAsNumber;
+  inpKol22=document.getElementById('kol22').valueAsNumber;
+  inpKol23=document.getElementById('kol23').valueAsNumber;
+  inpKol24=document.getElementById('kol24').valueAsNumber;
+  inpKol25=document.getElementById('kol25').valueAsNumber;
+  inpKol26=document.getElementById('kol26').valueAsNumber;
+  inpKol27=document.getElementById('kol27').valueAsNumber;
+
+  inpKol=+inpKol1+ +inpKol2+ +inpKol3+ +inpKol4+ +inpKol5+ +inpKol6+ +inpKol7+ +inpKol8+ +inpKol9+ +inpKol10+ +inpKol11+ +inpKol12+ +inpKol13+ +inpKol14+ +inpKol15+ +inpKol6+ +inpKol17+ +inpKol18+ +inpKol19+ +inpKol20+ +inpKol21+ +inpKol22+ +inpKol23+ +inpKol24+ +inpKol25+ +inpKol26+ +inpKol27 ;     //количество заданий из формы
+  
 
     otv_uch=[];          //создаем две табл с ответами и закодир ответами
     otv_uch_orig=[];
@@ -308,43 +1317,39 @@ function proverit(){
 
     ball = 0;
     document.getElementById('vopros'+inpKol).style.display = "none";    //прячем все вопросы
-    document.getElementById('kn_pr').style.display = "none";
-    document.getElementById('name_test').style.display = "none";
-
-    otveti = "<table class='table'><tr class='table-active'><td>№</td><td>Вопрос </td><td>Ответ</td></tr>"; //выводим таблицу с ответами
-
+    document.getElementById('kn_pr').style.display = "none";   
+	
+    otveti = "<table class='table' ><tr class='table-active' ><td>№</td><td>Вопрос </td><td>Ответ</td></tr>"; //выводим таблицу с ответами
+    
+	stroka = '';
     for (var  i = 0; i <= (inpKol-1); i++){ 
        if(otv_uch[i] == voprosi[i][1]){
            ball +=1;
-           otveti += "<tr class='table-success'><td>"+(i+1)+"</td><td>"+voprosi[i][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_uch_orig[i]+inpKol+"</td></tr>";
+		   stroka += voprosi[i][2] + "_YES/";
+           otveti += "<tr class='table-success'><td>"+(i+1)+"</td><td>"+voprosi[i][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_uch_orig[i]+"</td></tr>";
        }else {
            otveti += "<tr class='table-danger'><td>"+(i+1)+"</td><td>"+voprosi[i][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_uch_orig[i]+"</td></tr>"; 
+		   stroka += voprosi[i][2] + "_NO/";
        }
     }
  
      vsego_zadach = inpKol;
      procent_vip = ball/vsego_zadach * 100;
      procent_vip = procent_vip.toFixed();
-	 document.getElementById('rezultat').innerHTML = "<p style='font-weight:bold;'>Тест. Тема - '<span id='tema2'></span>'.</p><span id='ot'>Задания выполнены верно на "+procent_vip+"%.</span><br><div class='progress'><div class='progress-bar' role='progressbar' style='width: "+procent_vip+"%' aria-valuenow='"+procent_vip+"' aria-valuemin='0' aria-valuemax='100'></div></div><br>"+otveti;
-     document.getElementById('tema2').innerHTML = test;
+	 document.getElementById('rezultat').innerHTML = "<span id='ot'>Задания выполнены верно на "+procent_vip+"%.</span><br><div class='progress'><div class='progress-bar' role='progressbar' style='width: "+procent_vip+"%' aria-valuenow='"+procent_vip+"' aria-valuemin='0' aria-valuemax='100'></div></div><br>"+otveti;
+
 	 
 //**************************************	    ВЫГРУЗКА в EXCEL
 
-   //  var Name = jQuery("#Namggge").val();
- //    var Phone = jQuery("#Phone").val();
-   //  var Procent = 100;
      var http = new XMLHttpRequest();
-     var url = "https://script.google.com/macros/s/AKfycbyQeL95AzZs8WZKD_5Zi3n7fz1djbgWxNVD8TNXRDP_3U4HYWA/exec";
-     var params = "&p1="+procent_vip;
-     http.open("GET", url+"?"+params, true);
+     var url =           "https://script.google.com/macros/s/AKfycbxZEremPYxpiJtfr8DGx30yiuWwbBQo9CI-JIPO/exec";
+     var params1 = "&p1=" + procent_vip;
+	 var params2 = "&p2=" + document.getElementById('identification').value;
+	 var params3 = "&p3=" + inpKol;
+	 var params4 = "&p4=" + ball;
+	 var params5 = "&p5=" + stroka;
+     http.open("GET", url+"?"+params1+params2+params3+params4+params5, true);                     //stroka  - записываем все номера задания и плюс или минус
      http.send(null);
-
- //  var params = "p1="+Name+"&p2="+Phone+"&p3="+Quession;
- //     http.onreadystatechange = function() {
-     //      if((http.readyState == 4) && ((http.status = 200))) {
-      //        //  alert(http.responseText);
-   //         }
-      //  }
 }
 
 function kodirov(stroka) { 
