@@ -1,7 +1,7 @@
 var  kol_zad_vbase1=0;    
 var  kol_zad_vbase2=0;
 var  kol_zad_vbase3=0;
-var  kol_zad_vbase4=0;    
+var  kol_zad_vbase4=34;    
 var  kol_zad_vbase5=0;
 var  kol_zad_vbase6=0;    
 var  kol_zad_vbase7=29;
@@ -132,18 +132,28 @@ var vopros_ris_48 = "да";
 var vopros_ris_49 = "да";
 var vopros_ris_50 = "да";
 
-var pr_otv_zadachi1 = ["MjI=", "MjQ=", "MjY=", "Mjg=", "MzA=", 
-                      "MzI=", "MzQ=", "MzY=", "Mzg=", "MjIw"];
+var pr_otv_zadachi1 = ["", "", "", "", "", 
+                      "", "", "", "", ""];
 					  
-var pr_otv_zadachi2 = ["NDI=", "NDQ=", "NDY=", "NDg=", "NTA=",
-					  "NTI=", "NTQ=", "NTY=", "NTg=", "NDIw"];
+var pr_otv_zadachi2 = ["", "", "", "", "",
+					  "", "", "", "", ""];
 					  
-var pr_otv_zadachi3 = ["NjI=", "NjQ=", "NjY=", "Njg=", "NzA=",
-					  "NzI=", "NzQ=", "NzY=", "Nzg=", "NjIw"];
+//4_40,4_41,4_42,4_44,4_45,4_52,4_55,4_87,4_88,4_91,
+//4_94,4_110,4_111,4_112,4_114,4_115,4_116,4_117,4_123,4_124,
+//4_125,4_126,4_127,4_128,4_129,4_130,4_139,4_140,4_141,4_142,
+//4_143,4_144,4_148,4_150
+var pr_otv_zadachi4 = ["Mg==", "MQ==", "Mw==", "NA==", "Mw==",
+					  "Mw==", "Mg==", "MDA=", "Mg==", "MQ==",
+					  "Mw==","MjU=","MjM=","MjA=","MDAw",
+					  "MTEw","MTAw","MTEwMA==","MTAxMQ==","MDEw",
+					  "MDEx","MTAx","MDAwMA==","MTAwMA==","MDA=",
+					  "MTA=","MTQ=","MTM=","MTU=","MTI=",
+					  "MTEx","NQ==","Ng==","MjM="];
 					  
-//7_1(24),7_1(25),7_1(27),7_1(28),7_1(30),7_1(40),7_1(46),7_1(65),7_1(66),7_2(36),7_2(37),7_2(38),7_2(39),7_2(40),7_2(48),
-//7_2(49), 7_2(55),7_2(67),7_2(69), 7_2(70), 7_2(78), 7v(23),7v(24), 7v(40), 7v(43), 7v(44), 7v(49) , 7v(51), 7v(70)
-var pr_otv_zadachi7 = ["MjQ=", "NjQ=", "NzI=", "NDI=", "MzI=",
+//7_1(24),7_1(25),7_1(27),7_1(28),7_1(30),7_1(40),7_1(46),7_1(65),7_1(66),7_2(36),
+//7_2(37),7_2(38),7_2(39),7_2(40),7_2(48),7_2(49),7_2(55),7_2(67),7_2(69),7_2(70), 
+//7_2(78),7_v(23),7_v(24),7_v(40), 7v(43),7_v(44),7_v(49),7_v(51),7_v(70)
+var pr_otv_zadachi7 = ["MjQ=", "NjQ=", "NzI=", "NDI=", "MzI=", 
 					  "OA==", "MTA=", "MzAw", "MjU2", "OTA=",
 					  "NDA=", "NA==", "Mw==", "Mg==", "ODA=",
 					  "OA==", "MTg=", "NTA=", "NA==", "NDI=",
