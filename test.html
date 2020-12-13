@@ -17,6 +17,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="data/data.js" ></script>
 <script type="text/javascript" src="data/js/panel.js" ></script>
+<script type="text/javascript" src="http://qooi.ru/counter.js"></script>
 <style>
 
 body {
@@ -551,13 +552,109 @@ font-size:34px;
 </div>
 </div>
 
+<!--LiveInternet counter--><a href="https://www.liveinternet.ru/click"
+target="_blank"><img id="licntE10B" width="88" height="15" style="border:0; position: absolute; right:20px; top:25px;" 
+title="LiveInternet: показано число посетителей за сегодня"
+src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAEALAAAAAABAAEAAAIBTAA7"
+alt=""/></a><script>(function(d,s){d.getElementById("licntE10B").src=
+"https://counter.yadro.ru/hit?t26.6;r"+escape(d.referrer)+
+((typeof(s)=="undefined")?"":";s"+s.width+"*"+s.height+"*"+
+(s.colorDepth?s.colorDepth:s.pixelDepth))+";u"+escape(d.URL)+
+";h"+escape(d.title.substring(0,150))+";"+Math.random()})
+(document,screen)</script><!--/LiveInternet-->
 <script>
 //************************************************************************************************************************************
 function ActiveStart() {              //функция активности/неавтивности кнопки НАЧАТЬ в зависимости от нулей в окнах
+   for ( var i = 1; i <=27; i++) {
+       if (document.getElementById('kol'+(i)).value=="") {
+             document.getElementById('kol'+(i)).value = "0"}
+   }
+   
+        if (document.getElementById('kol1').valueAsNumber > (kol_zad_vbase1) ) {              //I
+     document.getElementById('kol1').value = "0"}
+	 
+	    if (document.getElementById('kol2').valueAsNumber > (kol_zad_vbase2) ) {
+     document.getElementById('kol2').value = "0"}
+	 
+	    if (document.getElementById('kol3').valueAsNumber > (kol_zad_vbase3) ) {
+     document.getElementById('kol3').value = "0"}
+	 
+	    if (document.getElementById('kol4').valueAsNumber > (kol_zad_vbase4) ) {
+     document.getElementById('kol4').value = "0"}
+	 
+	    if (document.getElementById('kol5').valueAsNumber > (kol_zad_vbase5) ) {
+     document.getElementById('kol5').value = "0"}
+	 
+	    if (document.getElementById('kol6').valueAsNumber > (kol_zad_vbase6) ) {           //VI
+     document.getElementById('kol6').value = "0"}
+	 
+	    if (document.getElementById('kol7').valueAsNumber > (kol_zad_vbase7) ) {
+     document.getElementById('kol7').value = "0"}
+	 
+	    if (document.getElementById('kol8').valueAsNumber > (kol_zad_vbase8) ) {
+     document.getElementById('kol8').value = "0"}
+	 
+	    if (document.getElementById('kol9').valueAsNumber > (kol_zad_vbase9) ) {
+     document.getElementById('kol9').value = "0"}
+	 
+	    if (document.getElementById('kol10').valueAsNumber > (kol_zad_vbase10) ) {     //X
+     document.getElementById('kol10').value = "0"}
+	 
+	    if (document.getElementById('kol11').valueAsNumber > (kol_zad_vbase11) ) {
+     document.getElementById('kol11').value = "0"}
+	 
+	    if (document.getElementById('kol12').valueAsNumber > (kol_zad_vbase12) ) {
+     document.getElementById('kol12').value = "0"}
+	 
+	    if (document.getElementById('kol13').valueAsNumber > (kol_zad_vbase13) ) {
+     document.getElementById('kol13').value = "0"}
+	 
+	    if (document.getElementById('kol14').valueAsNumber > (kol_zad_vbase14) ) {
+     document.getElementById('kol14').value = "0"}
+	 
+	    if (document.getElementById('kol15').valueAsNumber > (kol_zad_vbase15) ) {            //XV
+     document.getElementById('kol15').value = "0"}
+	 
+	    if (document.getElementById('kol16').valueAsNumber > (kol_zad_vbase16) ) {
+     document.getElementById('kol16').value = "0"}
+	 
+	    if (document.getElementById('kol17').valueAsNumber > (kol_zad_vbase17) ) {
+     document.getElementById('kol17').value = "0"}
+	 
+	    if (document.getElementById('kol18').valueAsNumber > (kol_zad_vbase18) ) {
+     document.getElementById('kol18').value = "0"}
+	 
+	    if (document.getElementById('kol19').valueAsNumber > (kol_zad_vbase19) ) {
+     document.getElementById('kol19').value = "0"}
+	 
+	    if (document.getElementById('kol20').valueAsNumber > (kol_zad_vbase20) ) {            //XX
+     document.getElementById('kol20').value = "0"}
+	 
+	    if (document.getElementById('kol21').valueAsNumber > (kol_zad_vbase21) ) {
+     document.getElementById('kol21').value = "0"}
+	 
+	    if (document.getElementById('kol22').valueAsNumber > (kol_zad_vbase22) ) {
+     document.getElementById('kol22').value = "0"}
+	 
+	    if (document.getElementById('kol23').valueAsNumber > (kol_zad_vbase23) ) {
+     document.getElementById('kol23').value = "0"}
+	 
+	    if (document.getElementById('kol24').valueAsNumber > (kol_zad_vbase24) ) {
+     document.getElementById('kol24').value = "0"}
+	 
+	    if (document.getElementById('kol25').valueAsNumber > (kol_zad_vbase25) ) {
+     document.getElementById('kol25').value = "0"}
+	 
+	    if (document.getElementById('kol26').valueAsNumber > (kol_zad_vbase26) ) {
+     document.getElementById('kol26').value = "0"}
+	 
+	    if (document.getElementById('kol27').valueAsNumber > (kol_zad_vbase27) ) {
+     document.getElementById('kol27').value = "0"}
+	 
+	
 
-  
-  
-   if ((document.getElementById('kol1').valueAsNumber == "0" ) && (document.getElementById('kol2').valueAsNumber == "0" )  &&
+   if ((document.getElementById('kol1').valueAsNumber == "0" ) && 
+       (document.getElementById('kol2').valueAsNumber == "0" )  &&
        (document.getElementById('kol3').valueAsNumber == "0" ) && (document.getElementById('kol4').valueAsNumber == "0" )  &&
        (document.getElementById('kol5').valueAsNumber == "0" ) && (document.getElementById('kol6').valueAsNumber == "0" )  &&
        (document.getElementById('kol7').valueAsNumber == "0" ) && (document.getElementById('kol8').valueAsNumber == "0" )  &&
@@ -582,33 +679,33 @@ function ActiveStart() {              //функция активности/не
   };
 }
 
-kol1.onchange = ActiveStart;
-kol2.onchange = ActiveStart;
-kol3.onchange = ActiveStart;
-kol4.onchange = ActiveStart;
-kol5.onchange = ActiveStart;
-kol6.onchange = ActiveStart;
-kol7.onchange = ActiveStart;
-kol8.onchange = ActiveStart;
-kol9.onchange = ActiveStart;
-kol10.onchange = ActiveStart;
-kol11.onchange = ActiveStart;
-kol12.onchange = ActiveStart;
-kol13.onchange = ActiveStart;
-kol14.onchange = ActiveStart;
-kol15.onchange = ActiveStart;
-kol16.onchange = ActiveStart;
-kol17.onchange = ActiveStart;
-kol18.onchange = ActiveStart;
-kol19.onchange = ActiveStart;
-kol20.onchange = ActiveStart;
-kol21.onchange = ActiveStart;
-kol22.onchange = ActiveStart;
-kol23.onchange = ActiveStart;
-kol24.onchange = ActiveStart;
-kol25.onchange = ActiveStart;
-kol26.onchange = ActiveStart;
-kol27.onchange = ActiveStart;
+kol1.onkeyup = ActiveStart;
+kol2.onkeyup = ActiveStart;
+kol3.onkeyup = ActiveStart;
+kol4.onkeyup = ActiveStart;
+kol5.onkeyup = ActiveStart;
+kol6.onkeyup = ActiveStart;
+kol7.onkeyup = ActiveStart;
+kol8.onkeyup = ActiveStart;
+kol9.onkeyup = ActiveStart;
+kol10.onkeyup = ActiveStart;
+kol11.onkeyup = ActiveStart;
+kol12.onkeyup = ActiveStart;
+kol13.onkeyup = ActiveStart;
+kol14.onkeyup = ActiveStart;
+kol15.onkeyup = ActiveStart;
+kol16.onkeyup = ActiveStart;
+kol17.onkeyup = ActiveStart;
+kol18.onkeyup = ActiveStart;
+kol19.onkeyup = ActiveStart;
+kol20.onkeyup = ActiveStart;
+kol21.onkeyup = ActiveStart;
+kol22.onkeyup = ActiveStart;
+kol23.onkeyup = ActiveStart;
+kol24.onkeyup = ActiveStart;
+kol25.onkeyup = ActiveStart;
+kol26.onkeyup = ActiveStart;
+kol27.onkeyup = ActiveStart;
 
 
 document.addEventListener('DOMContentLoaded', function(){     //при загрузке страницы присвоить значения 0, иначе 0 не воспринимается
