@@ -25,6 +25,7 @@ html, body { height:100%;}
 
 	/* Header */
 	header{
+		
 		height:72px;
 		overflow:hidden;
 		background:url(../images/header-bg.gif) 0 0 repeat-x;
@@ -133,8 +134,8 @@ h1 {
 	background:url(../images/logo.jpg) no-repeat 0 0;
 	padding:6px 0 8px 69px;
 	position:absolute;
-	left:5px;
-	top:7px;
+	left:0px;
+	top:6px;
 }
 	h1 a {
 		color:#fff;
@@ -169,7 +170,7 @@ h4 {
 
 /*==================boxes====================*/
 .main-box {
-	border-top:5px solid #eaeaea;
+	border-top:0px solid #eaeaea;
 	background:#fff;
 	width:100%;
 }
@@ -260,7 +261,7 @@ header nav {
 			filter:  progid:DXImageTransform.Microsoft.gradient(startColorStr='#0000ff', EndColorStr='#000088'); /* IE6,IE7 */
 			-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#0000ff', EndColorStr='#000088')"; /* IE8 */
 		}
-				header nav ul li:nth-of-type(7) a {
+		header nav ul li:nth-of-type(7) a {
 			background:#8800ff;
 			background-image: -moz-linear-gradient(top, #8800ff, #440088); /* FF3.6 */
 			background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, #8800ff),color-stop(1, #440088)); /* Saf4+, Chrome */
