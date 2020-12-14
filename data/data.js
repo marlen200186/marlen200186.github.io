@@ -1,4 +1,4 @@
-var  kol_zad_vbase1=0;    
+var  kol_zad_vbase1=18;    
 var  kol_zad_vbase2=0;
 var  kol_zad_vbase3=0;
 var  kol_zad_vbase4=34;    
@@ -132,8 +132,13 @@ var vopros_ris_48 = "да";
 var vopros_ris_49 = "да";
 var vopros_ris_50 = "да";
 
-var pr_otv_zadachi1 = ["", "", "", "", "", 
-                      "", "", "", "", ""];
+
+//1_49,1_50,1_56,1_59,1_61, 1_63,1_73, 1_77, 1_80,1_83,
+//1_86,1_87, 1_89, 1_90,1_94, 1_96, 1_98,1_101
+var pr_otv_zadachi1 = ["OA==", "MTI=", "MTY=", "MjI=", "MzA=", 
+                      "OA==", "NQ==", "MjA=", "MTQ=", "MjU=",
+					  "Nw==","MjU=","MjU=","MzA=","Njc=",
+					  "QTUW","Q==","MjY=","",""];
 					  
 var pr_otv_zadachi2 = ["", "", "", "", "",
 					  "", "", "", "", ""];
