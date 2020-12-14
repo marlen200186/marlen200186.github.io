@@ -10,7 +10,7 @@ mark, rp, rt, ruby, summary, time{ display: inline }
 	margin: 0 auto;
 	position: fixed;
 	top:0px;
-	left:158px;    
+	left:150px;    
 	width: 1050px;
 	font-size:.8125em;
 }
@@ -109,7 +109,7 @@ a:hover{
 }
 
 h1 {
-	font-size:34px;
+	font-size:30px;
 	line-height:1.2em;
 	color:#fff;
 	font-weight:normal;
