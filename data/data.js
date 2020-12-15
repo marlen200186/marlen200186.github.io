@@ -7,7 +7,7 @@ var  kol_zad_vbase6=0;
 var  kol_zad_vbase7=29;
 var  kol_zad_vbase8=0;
 var  kol_zad_vbase9=0;    
-var  kol_zad_vbase10=0;
+var  kol_zad_vbase10=20;
 var  kol_zad_vbase11=0;    
 var  kol_zad_vbase12=0;
 var  kol_zad_vbase13=0;
@@ -140,13 +140,17 @@ var pr_otv_zadachi1 = ["OA==", "MTI=", "MTY=", "MjI=", "MzA=",
 					  "Nw==","MjU=","MjU=","MzA=","Njc=",
 					  "QTUW","Q==","MjY=","",""];
 					  
-var pr_otv_zadachi2 = ["", "", "", "", "",
-					  "", "", "", "", ""];
+//11_34	,11_35, 11_39,11_46,11_47,11_48,11_51,11_52,11_53,11_57,
+//11_58,11_67,11_65,11_66,11_62,11_63,11_61, 11_59,11_54,11_56
+var pr_otv_zadachi11 = ["Mjg1MA==", "MTMwMA==", "OTQ=", "MTAwMA==", "Mzkw",
+					  "NDAw", "OA==", "MTA=", "MTI=", "MTEz",
+					  "NDA=","MTg=","NDE=","MjM=","MjMwMA==",
+					  "MTY=","MjM=","NDY=","MjE=","MTg2"];
 					  
 //4_40,4_41,4_42,4_44,4_45,4_52,4_55,4_87,4_88,4_91,
 //4_94,4_110,4_111,4_112,4_114,4_115,4_116,4_117,4_123,4_124,
 //4_125,4_126,4_127,4_128,4_129,4_130,4_139,4_140,4_141,4_142,
-//4_143,4_144,4_148,4_150
+//4_143,4_144,4_148,4_150 
 var pr_otv_zadachi4 = ["Mg==", "MQ==", "Mw==", "NA==", "Mw==",
 					  "Mw==", "Mg==", "MDA=", "Mg==", "MQ==",
 					  "Mw==","MjU=","MjM=","MjA=","MDAw",
