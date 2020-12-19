@@ -28,7 +28,7 @@ var  kol_zad_vbase27=0;
 
 
 
-var test = "ЕГЭ";
+var test = "ЕГ1";
 var peremeshat_voprosi = "да";
 var vopros_1 = "";
 var vopros_2 = "";
