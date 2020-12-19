@@ -1,5 +1,5 @@
 var  kol_zad_vbase1=18;    
-var  kol_zad_vbase2=26;
+var  kol_zad_vbase2=25;
 var  kol_zad_vbase3=0;
 var  kol_zad_vbase4=34;    
 var  kol_zad_vbase5=0;
