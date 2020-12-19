@@ -1456,11 +1456,11 @@ function proverit(){
     for (var  i = 0; i <= (inpKol-1); i++){ 
        if(otv_uch[i] == voprosi[i][1]){
            ball +=1;
-		   stroka += voprosi[i][2] + "_YES"+otv_uch[i]+"/";
+		   stroka += voprosi[i][2] + "_YES"+otv_uch_orig[i]+"/";
            otveti += "<tr class='table-success'><td>"+(i+1)+"</td><td>"+voprosi[i][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_uch_orig[i]+"</td></tr>";
        }else {
            otveti += "<tr class='table-danger'><td>"+(i+1)+"</td><td>"+voprosi[i][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_uch_orig[i]+"</td></tr>"; 
-		   stroka += voprosi[i][2] + "_NO"+otv_uch[i]+"/";
+		   stroka += voprosi[i][2] + "_NO"+otv_uch_orig[i]+"/";
        }
     }
  
