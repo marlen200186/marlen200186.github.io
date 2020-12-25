@@ -2,10 +2,38 @@
 
 
 function osnova(nomer) {
-  inpKol1=document.getElementById('kol1').valueAsNumber;
+inpKol1=document.getElementById('kol1').valueAsNumber;
   inpKol2=document.getElementById('kol2').valueAsNumber;
   inpKol3=document.getElementById('kol3').valueAsNumber;
-  inpKol=+inpKol1+ +inpKol2+ +inpKol3;     //количество заданий из формы
+  inpKol4=document.getElementById('kol4').valueAsNumber;
+  inpKol5=document.getElementById('kol5').valueAsNumber;
+  inpKol6=document.getElementById('kol6').valueAsNumber;
+  inpKol7=document.getElementById('kol7').valueAsNumber;
+  inpKol8=document.getElementById('kol8').valueAsNumber;
+  inpKol9=document.getElementById('kol9').valueAsNumber;
+  
+  inpKol10=document.getElementById('kol10').valueAsNumber;
+  inpKol11=document.getElementById('kol11').valueAsNumber;
+  inpKol12=document.getElementById('kol12').valueAsNumber;
+  inpKol13=document.getElementById('kol13').valueAsNumber;
+  inpKol14=document.getElementById('kol14').valueAsNumber;
+  inpKol15=document.getElementById('kol15').valueAsNumber;
+  inpKol16=document.getElementById('kol16').valueAsNumber;
+  inpKol17=document.getElementById('kol17').valueAsNumber;
+  inpKol18=document.getElementById('kol18').valueAsNumber;
+  inpKol19=document.getElementById('kol19').valueAsNumber;
+  
+  inpKol20=document.getElementById('kol20').valueAsNumber;
+  inpKol21=document.getElementById('kol21').valueAsNumber;
+  inpKol22=document.getElementById('kol22').valueAsNumber;
+  inpKol23=document.getElementById('kol23').valueAsNumber;
+  inpKol24=document.getElementById('kol24').valueAsNumber;
+  inpKol25=document.getElementById('kol25').valueAsNumber;
+  inpKol26=document.getElementById('kol26').valueAsNumber;
+  inpKol27=document.getElementById('kol27').valueAsNumber;
+
+  inpKol=+inpKol1+ +inpKol2+ +inpKol3+ +inpKol4+ +inpKol5+ +inpKol6+ +inpKol7+ +inpKol8+ +inpKol9+ +inpKol10+ +inpKol11+ +inpKol12+ +inpKol13+ +inpKol14+ +inpKol15+ +inpKol6+ +inpKol17+ +inpKol18+ +inpKol19+ +inpKol20+ +inpKol21+ +inpKol22+ +inpKol23+ +inpKol24+ +inpKol25+ +inpKol26+ +inpKol27 ;     //количество заданий из формы
+     //количество заданий из формы
   numberZad=document.getElementById('kolich').value;
   
   
