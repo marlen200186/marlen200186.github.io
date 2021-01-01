@@ -807,12 +807,14 @@ function voiti(){
     id=document.getElementById('idNomer').value;
     for (var i=0; i<=(identificatori.length-1); i++) {
 	     if (id == identificatori[i][0]) {
+		    if (id == "0764378") {
+				kol_zad_vbase3=23;
+				kol3.setAttribute("max",kol_zad_vbase3);
+			 }
 		     document.getElementById('identification').value =  identificatori[i][1];
 		     document.getElementById('identification').style.display="none";
 			 document.getElementById('LabelZad1').style.display="block";
-			 if id == "0764378" {
-					kol_zad_vbase3=23;
-			 }
+
 		 } 
 		 else { k = +k + + 1
 		 }
