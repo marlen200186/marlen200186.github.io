@@ -46,13 +46,7 @@ var  kol_zad_vbase10_17=0;
 var  kol_zad_vbase10_18=0;
 var  kol_zad_vbase10_19=0;    
 var  kol_zad_vbase10_20=0;
-var  kol_zad_vbase10_21=0;    
-var  kol_zad_vbase10_22=0;
-var  kol_zad_vbase10_23=0;
-var  kol_zad_vbase10_24=0;    
-var  kol_zad_vbase10_25=0;
-var  kol_zad_vbase10_26=0;    
-var  kol_zad_vbase10_27=0;
+
 
 var test = "ЕГЭ";
 var peremeshat_voprosi = "да";
