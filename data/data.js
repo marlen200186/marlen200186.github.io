@@ -5,7 +5,7 @@ var  kol_zad_vbase4=34;
 var  kol_zad_vbase5=0;
 var  kol_zad_vbase6=0;    
 var  kol_zad_vbase7=29;
-var  kol_zad_vbase8=11;
+var  kol_zad_vbase8=0;
 var  kol_zad_vbase9=0;    
 var  kol_zad_vbase10=0;
 var  kol_zad_vbase11=20;    
@@ -25,27 +25,6 @@ var  kol_zad_vbase24=0;
 var  kol_zad_vbase25=0;
 var  kol_zad_vbase26=0;    
 var  kol_zad_vbase27=0;
-
-var  kol_zad_vbase10_1=25;    
-var  kol_zad_vbase10_2=0;
-var  kol_zad_vbase10_3=0;
-var  kol_zad_vbase10_4=0;    
-var  kol_zad_vbase10_5=0;
-var  kol_zad_vbase10_6=0;    
-var  kol_zad_vbase10_7=0;
-var  kol_zad_vbase10_8=0;
-var  kol_zad_vbase10_9=0;    
-var  kol_zad_vbase10_10=0;
-var  kol_zad_vbase10_11=0;    
-var  kol_zad_vbase10_12=0;
-var  kol_zad_vbase10_13=0;
-var  kol_zad_vbase10_14=0;    
-var  kol_zad_vbase10_15=0;
-var  kol_zad_vbase10_16=0;    
-var  kol_zad_vbase10_17=0;
-var  kol_zad_vbase10_18=0;
-var  kol_zad_vbase10_19=0;    
-var  kol_zad_vbase10_20=0;
 
 
 var test = "ЕГЭ";
