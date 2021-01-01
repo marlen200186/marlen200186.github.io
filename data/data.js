@@ -1,5 +1,5 @@
 var  kol_zad_vbase1=18;    
-var  kol_zad_vbase2=25;
+var  kol_zad_vbase2=0;
 var  kol_zad_vbase3=0;
 var  kol_zad_vbase4=34;    
 var  kol_zad_vbase5=0;
@@ -26,7 +26,33 @@ var  kol_zad_vbase25=0;
 var  kol_zad_vbase26=0;    
 var  kol_zad_vbase27=0;
 
-
+var  kol_zad_vbase10_1=25;    
+var  kol_zad_vbase10_2=0;
+var  kol_zad_vbase10_3=0;
+var  kol_zad_vbase10_4=0;    
+var  kol_zad_vbase10_5=0;
+var  kol_zad_vbase10_6=0;    
+var  kol_zad_vbase10_7=0;
+var  kol_zad_vbase10_8=0;
+var  kol_zad_vbase10_9=0;    
+var  kol_zad_vbase10_10=0;
+var  kol_zad_vbase10_11=0;    
+var  kol_zad_vbase10_12=0;
+var  kol_zad_vbase10_13=0;
+var  kol_zad_vbase10_14=0;    
+var  kol_zad_vbase10_15=0;
+var  kol_zad_vbase10_16=0;    
+var  kol_zad_vbase10_17=0;
+var  kol_zad_vbase10_18=0;
+var  kol_zad_vbase10_19=0;    
+var  kol_zad_vbase10_20=0;
+var  kol_zad_vbase10_21=0;    
+var  kol_zad_vbase10_22=0;
+var  kol_zad_vbase10_23=0;
+var  kol_zad_vbase10_24=0;    
+var  kol_zad_vbase10_25=0;
+var  kol_zad_vbase10_26=0;    
+var  kol_zad_vbase10_27=0;
 
 var test = "ЕГЭ";
 var peremeshat_voprosi = "да";
@@ -131,6 +157,22 @@ var vopros_ris_47 = "да";
 var vopros_ris_48 = "да";
 var vopros_ris_49 = "да";
 var vopros_ris_50 = "да";
+
+//старое первое задание на системы счисления
+//1_2,1_3,1_13,1_14,1_15,1_22,1_23,1_24,1_25,1_27,
+//1_40,1_43,1_45,1_47,1_48,1_55,1_73,1_74,1_77,1_79,
+//1_84,1_85,1_86,1_91,1_94
+var pr_otv_zadachi10_1 = ["NA==","NQ==","NA==","Mw==","Mw==",
+                       "MQ==","Mw==","Mg==","NA==","Mw==",
+                       "MQ==","Mw==","Mg==","MQ==","Mg==",
+					   "Mw==","NQ==","NA==","NQ==","NA==",
+					   "Mw==","NQ==","Ng==","MTU=","MTgx"];
+
+
+
+
+
+
 
 
 //1_49,1_50,1_56,1_59,1_61, 1_63,1_73, 1_77, 1_80,1_83,
