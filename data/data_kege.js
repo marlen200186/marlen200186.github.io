@@ -27,7 +27,7 @@ var  kol_zad_vbase26=0;
 var  kol_zad_vbase27=0;
 
 
-var test = "ЕГЭ";
+var test = "ЕГЭjjjjjj";
 //hjkfkjf
 var vopros_1 = "";
 var vopros_2 = "";
