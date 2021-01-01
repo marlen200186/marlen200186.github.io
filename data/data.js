@@ -148,7 +148,7 @@ var pr_otv_zadachi2 = ["NA==","NQ==","NA==","Mw==","Mw==",
                        "MQ==","Mw==","Mg==","NA==","Mw==",
                        "MQ==","Mw==","Mg==","MQ==","Mg==",
 					   "Mw==","NQ==","NA==","NQ==","NA==",
-					   "Mw==","NQ==","Ng==","MTU=","MTgx"]
+					   "Mw==","NQ==","Ng==","MTU=","MTgx"];
 
 
 //3_58,3_59,3_61,3_64,3_65,3_66,3_68, 3_70, 3_72,3_74
@@ -158,7 +158,7 @@ var pr_otv_zadachi3 = ["Mw==","Nw==","NjIxNA==","MzY4OA==","Njk1Mg==",
 						"Mw==","NA==","Mw==","Mw==","Mw==",
 						"MQ==","MA==","Mg==","MA==","Mw==",
 						"Mg==","Mw==","NQ==","MjE4Ng==","MjA4MQ==",
-                        "Ng==","NTE3","Mg=="]
+                        "Ng==","NTE3","Mg=="];
 
 
   
