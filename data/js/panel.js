@@ -42,14 +42,20 @@ inpKol1=document.getElementById('kol1').valueAsNumber;
          document.getElementById('vopros'+(nomer)).style.display = "block";
 	     document.getElementById('kn_sl').style.display = "none";
          document.getElementById('kn_pr').style.display = "block";
+		
       }
 	  else {
                   document.getElementById('vopros'+(numberZad)).style.display = 'none';
                   document.getElementById('vopros'+nomer).style.display = "block";
 				  document.getElementById('kn_sl').style.display = "block";
                   document.getElementById('kn_pr').style.display = "none";
+				  
 				  }
-	document.getElementById('kolich').value = nomer;
+	  if (voprosi[nomer-1][3] != "") {                                                   //для отображения ссылки для скачивания файла
+			document.getElementById('file' + nomer).style.display = "block";
+			fileval[nomer-1]=  voprosi[nomer-1][3];
+	     }
+	  document.getElementById('kolich').value = nomer;
 }
 
 
