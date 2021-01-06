@@ -877,6 +877,12 @@ document.getElementById('play').setAttribute("disabled","disabled");
 
 //**************************************************************************************************************************************
 function voiti(){
+   
+
+
+
+
+
     var k = 0;
     id=document.getElementById('idNomer').value;
     for (var i=0; i<=(identificatori.length-1); i++) {
@@ -903,67 +909,130 @@ function voiti(){
 		 else { k = +k + + 1
 		 }
 	}
+	
+	  var http = new XMLHttpRequest();
+     var url =           "https://script.google.com/macros/s/AKfycbxZEremPYxpiJtfr8DGx30yiuWwbBQo9CI-JIPO/exec";
+	var  params2 ='&p2='+  document.getElementById('identification').value;
+	  var params1 = "&p1=vhod";
+     http.open("GET", url+"?"+params1+params2, true);                     //stroka  - записываем все номера задания и плюс или минус
+     http.send(null);
+	
+	
 	if (k ==identificatori.length) {
 	  alert('Пользователя с таким идентификатором не существует!')
 	}
 	
 	
 	if (kol_zad_vbase1 == "0") {
-		  document.getElementById('Text1').style.color='silver'; }
+		  document.getElementById('Text1').style.color='silver'; 
+		  document.getElementById('kol1').style.color='silver';}
+		  
 	if (kol_zad_vbase2 == "0") {
-		  document.getElementById('Text2').style.color='silver'; }
+		  document.getElementById('Text2').style.color='silver'; 
+		  document.getElementById('kol2').style.color='silver';}
+		  
 	if (kol_zad_vbase3 == "0") {
-		  document.getElementById('Text3').style.color='silver'; }		 
+		  document.getElementById('Text3').style.color='silver'; 
+		  document.getElementById('kol3').style.color='silver';}	
+		  
 	if (kol_zad_vbase4 == "0") {
-		  document.getElementById('Text4').style.color='silver'; }
+		  document.getElementById('Text4').style.color='silver'; 
+		  document.getElementById('kol4').style.color='silver';}
+		  
 	if (kol_zad_vbase5 == "0") {
-		  document.getElementById('Text5').style.color='silver'; }
+		  document.getElementById('Text5').style.color='silver'; 
+		  document.getElementById('kol5').style.color='silver';}
+		  
 	if (kol_zad_vbase6 == "0") {
-		  document.getElementById('Text6').style.color='silver'; }
+		  document.getElementById('Text6').style.color='silver'; 
+		  document.getElementById('kol6').style.color='silver';}
+		  
 	if (kol_zad_vbase7 == "0") {
-		  document.getElementById('Text7').style.color='silver';}
+		  document.getElementById('Text7').style.color='silver';
+		  document.getElementById('kol7').style.color='silver';}
+		  
 	if (kol_zad_vbase8 == "0") {
-		  document.getElementById('Text8').style.color='silver'; }
+		  document.getElementById('Text8').style.color='silver'; 
+		  document.getElementById('kol8').style.color='silver';}
+		  
 	if (kol_zad_vbase9 == "0") {
-		  document.getElementById('Text9').style.color='silver'; }
+		  document.getElementById('Text9').style.color='silver'; 
+		  document.getElementById('kol9').style.color='silver';}
+		  
 	if (kol_zad_vbase10 == "0") {
-		  document.getElementById('Text10').style.color='silver';}	 
+		  document.getElementById('Text10').style.color='silver';
+		  document.getElementById('kol10').style.color='silver';}	
+		  
 	 
 		if (kol_zad_vbase11 == "0") {
-		  document.getElementById('Text11').style.color='silver'; }
+		  document.getElementById('Text11').style.color='silver'; 
+		  document.getElementById('kol11').style.color='silver';}
+		  
 	if (kol_zad_vbase12 == "0") {
-		  document.getElementById('Text12').style.color='silver'; }
+		  document.getElementById('Text12').style.color='silver'; 
+		  document.getElementById('kol12').style.color='silver';}
+		  
 	if (kol_zad_vbase13 == "0") {
-		  document.getElementById('Text13').style.color='silver'; }		 
+		  document.getElementById('Text13').style.color='silver';
+          document.getElementById('kol13').style.color='silver'; }	
+		  
 	if (kol_zad_vbase14 == "0") {
-		  document.getElementById('Text14').style.color='silver'; }
+		  document.getElementById('Text14').style.color='silver';
+          document.getElementById('kol14').style.color='silver';		  }
+		  
 	if (kol_zad_vbase15 == "0") {
-		  document.getElementById('Text15').style.color='silver'; }
+		  document.getElementById('Text15').style.color='silver'; 
+		  document.getElementById('kol15').style.color='silver';}
+		  
 	if (kol_zad_vbase16 == "0") {
-		  document.getElementById('Text16').style.color='silver'; }
+		  document.getElementById('Text16').style.color='silver';
+		  document.getElementById('kol16').style.color='silver';}
+		  
 	if (kol_zad_vbase17 == "0") {
-		  document.getElementById('Text17').style.color='silver';}
+		  document.getElementById('Text17').style.color='silver';
+		  document.getElementById('kol17').style.color='silver';}
+		  
 	if (kol_zad_vbase18 == "0") {
-		  document.getElementById('Text18').style.color='silver'; }
+		  document.getElementById('Text18').style.color='silver'; 
+		  document.getElementById('kol18').style.color='silver';}
+		  
 	if (kol_zad_vbase19 == "0") {
-		  document.getElementById('Text19').style.color='silver'; }
+		  document.getElementById('Text19').style.color='silver';
+          document.getElementById('kol19').style.color='silver'; }
+		  
 	if (kol_zad_vbase20 == "0") {
-		  document.getElementById('Text20').style.color='silver';}	  
+		  document.getElementById('Text20').style.color='silver';
+		  document.getElementById('kol20').style.color='silver';}	
+		  
+	
 	
 	if (kol_zad_vbase21 == "0") {
-		  document.getElementById('Text21').style.color='silver'; }
+		  document.getElementById('Text21').style.color='silver'; 
+		  document.getElementById('kol21').style.color='silver';}
+		  
 	if (kol_zad_vbase22 == "0") {
-		  document.getElementById('Text22').style.color='silver'; }
+		  document.getElementById('Text22').style.color='silver'; 
+		  document.getElementById('kol22').style.color='silver';}
+		  
 	if (kol_zad_vbase23 == "0") {
-		  document.getElementById('Text23').style.color='silver'; }		 
+		  document.getElementById('Text23').style.color='silver'; 
+		  document.getElementById('kol23').style.color='silver';}	
+		  
 	if (kol_zad_vbase24 == "0") {
-		  document.getElementById('Text24').style.color='silver'; }
+		  document.getElementById('Text24').style.color='silver'; 
+		  document.getElementById('kol24').style.color='silver';}
+		  
 	if (kol_zad_vbase25 == "0") {
-		  document.getElementById('Text25').style.color='silver'; }
+		  document.getElementById('Text25').style.color='silver'; 
+		  document.getElementById('kol25').style.color='silver';}
+		  
 	if (kol_zad_vbase26 == "0") {
-		  document.getElementById('Text26').style.color='silver'; }
+		  document.getElementById('Text26').style.color='silver';
+		  document.getElementById('kol26').style.color='silver';}
+		  
 	if (kol_zad_vbase27 == "0") {
-		  document.getElementById('Text27').style.color='silver';}
+		  document.getElementById('Text27').style.color='silver';
+		  document.getElementById('kol27').style.color='silver';}
 
 }
 
