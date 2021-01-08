@@ -228,6 +228,13 @@ var pr_otv_zadachi17 = ["MjE1MSA5NjMw","MTY0OSAxMjg3Ng==","MTE3OCAxMDk5Mg==","MT
 						"ODU4NyAxNDg2Mzg4","MTQ1NSA0MjM3","MTYyMiA1MTM3","MTYwMCA0MjEw","MjkxOSA5Njc5",
 						"NzIzIC0zMTE1","MjA1NyAxOTI=","ODUxNSAxMjU="];
 
+//23_112,23_111,23_110,23_109,23_107,23_106,23_101,23_100,23_99,23_97,
+//23_92,23_90,23_89,23_88
+
+var pr_otv_zadachi23 = ["MTE1Nw==","NDAw","Mzkw","Mzg0","Mzc=",
+						"MjE=","NjM=","NDA=","NzU=","OTY=",
+						"MjM0","MjEw","MTgw","NzU="];
+
 
 var identificatori  = [['22','Я'], ['07691281','Брюхов'], ['07604704','Ваганов'], ['0765825','Голомако'],['0760816','Емелин'],
                        ['0766339','Калякин'],['0764957','Курицын'],['0761851','Лыжин'],['0765331','Тарасенко'],['07619845','Шустров'],
