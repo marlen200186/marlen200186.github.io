@@ -1,5 +1,5 @@
 var  kol_zad_vbase10_1=25;    
-var  kol_zad_vbase10_2=0;
+var  kol_zad_vbase10_2=18;
 var  kol_zad_vbase10_3=0;
 var  kol_zad_vbase10_4=0;    
 var  kol_zad_vbase10_5=0;
@@ -135,12 +135,16 @@ var pr_otv_zadachi10_1 = ["NA==","NQ==","NA==","Mw==","Mw==",
 					   "Mw==","NQ==","Ng==","MTU=","MTgx"];
 
 
-
-
-
-
-
-
+//задание №17 только с системами счисления
+//17_27,17_28,17_29,17_30,17_31,
+//17_32,17_33, 17_34,17_39,17_40,
+//17_41,17_42,17_43,17_44,17_49.
+//17_50, 17_51,17_52
+var pr_otv_zadachi10_2 = ["NDcxIDM3MjA=","NjgzIDc0MDc=","ODU1NSA5MTA4ODA=","MTUzMyAyMTkwMTk0","NTUwIDMxMzY=",
+							"Mzc2IDc3NTA=","MjE4NyA2NTU4","MTAyNCA0MDk0","MTQyNSA5MDgw","NDk0IDE4NzQ=",
+							"MTE5IDk0MjE=","MjYgMjU4Ng==","MTE3NiAzNzIz","NTg1IDkxODk=","Nzc0IDQwOTI=",
+							"ODUxIDMzNQ==","MTQ3MDYxICA4MjM1Mzg=","NDUgMTU2MTA="];
+							
 
 
 
