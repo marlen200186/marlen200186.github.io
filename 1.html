@@ -45,9 +45,10 @@ $(document).ready(function(){
     var employee_data = data.split(/\r?\n|\r/);
 	//data.set('Access-Control-Allow-Origin', '*');
     var table_data = '<table class="table table-bordered table-striped">';
-    for (var count = 0; count<employee_data.length; count++)
- 	   a[i]=[]; 
-	   j=0;
+    for(var count = 0; count<employee_data.length; count++)
+    {	    i=i+1;
+	    a[i]=[]; 
+	    j=0;
      var cell_data = employee_data[count].split(";");
      table_data += '<tr>';
      for(var cell_count=0; cell_count<cell_data.length; cell_count++)
@@ -56,14 +57,15 @@ $(document).ready(function(){
       if(count === 0)
       {
        table_data += '<th>'+cell_data[cell_count]+'</th>';
-	   a[i][j]=cell_data[cell_count];   
-	   j=j+1;
+
       }
       else
       {
        table_data += '<td>'+cell_data[cell_count]+'</td>';
 
       }
+	  	   a[i][j]=cell_data[cell_count];   
+	   j=j+1;
      }
      table_data += '</tr>';
     }
