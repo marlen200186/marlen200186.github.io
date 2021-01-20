@@ -18,13 +18,15 @@
     <br />
     <div align="center">
      <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button> <br> <br>
-	 <button type="button" name="konvert" id="konvert" class="btn btn-info" onclick="conv();">Convertion</button>
+	 
     </div>
     <br />
     <div id="employee_table">
     </div>
    </div>
   </div>
+  
+  <button type="button" name="konvert" id="konvert" class="btn btn-info" onclick="conv();">Convertion</button>
  </body>
 </html>
 
@@ -97,8 +99,8 @@ function kodirov(stroka) {
 }
 
 function conv(){
-   for (var i=0; i<=4;) {
-        for (var j=0; j<=5;) {
+   for (var i=0; i<=3;) {
+        for (var j=0; j<=3;) {
 		     a[i][j]=kodirov(a[i][j]);
 		}   
    }
