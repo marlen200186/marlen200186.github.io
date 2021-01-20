@@ -17,7 +17,8 @@
     <h1 align="center">CSV File to HTML Table Using AJAX jQuery</h1>
     <br />
     <div align="center">
-     <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
+     <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button> <br>
+	 <button type="button" name="konvert" id="konvert" class="btn btn-info" onclick="conv">Convertion</button>
     </div>
     <br />
     <div id="employee_table">
@@ -29,9 +30,7 @@
 
 <script>
 
-
 var a=[];
-
 var i=0;
 var j=0;
 $(document).ready(function(){
@@ -43,7 +42,6 @@ $(document).ready(function(){
    success:function(data)
    {
     var employee_data = data.split(/\r?\n|\r/);
-	//data.set('Access-Control-Allow-Origin', '*');
     var table_data = '<table class="table table-bordered table-striped">';
     for(var count = 0; count<employee_data.length; count++)
     {	    i=i+1;
@@ -76,4 +74,41 @@ $(document).ready(function(){
  });
  
 });
+
+
+function kodirov(stroka) { 
+    var b64ch = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefg'+ 
+                   'hijklmnopqrstuvwxyz0123456789+/='; 
+    var b64enc = ''; 
+    var ch1, ch2, ch3; 
+    var en1, en2, en3, en4; 
+    for (var i=0; i<stroka.length;) { 
+        ch1 = stroka.charCodeAt(i++); 
+        ch2 = stroka.charCodeAt(i++); 
+        ch3 = stroka.charCodeAt(i++); 
+        en1 = ch1 >> 2; 
+        en2 = ((ch1 & 3) << 4) | (ch2 >> 4); 
+        en3 = isNaN(ch2) ? 64:(((ch2 & 15) << 2) | (ch3 >> 6)); 
+        en4 = isNaN(ch3) ? 64:(ch3 & 63); 
+        b64enc += b64ch.charAt(en1) + b64ch.charAt(en2) + 
+                      b64ch.charAt(en3) + b64ch.charAt(en4); 
+    } 
+    return b64enc; 
+}
+
+function conv(){
+   for (var i=0; i<=a.length;) {
+        for (var j=0; j<=a[i].length;) {
+		     a[i][j]=kodirov(a[i][j]);
+		}   
+   }
+
+}
+
+
+
+
+
+
+
 </script>
