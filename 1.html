@@ -44,8 +44,8 @@ $(document).ready(function(){
     var employee_data = data.split(/\r?\n|\r/);
     var table_data = '<table class="table table-bordered table-striped">';
     for(var count = 0; count<employee_data.length; count++)
-    {	
-	    a[i]=[];     i=i+1;
+    {	i=i+1;
+	    a[i]=[];     
 	    j=0;
      var cell_data = employee_data[count].split(";");
      table_data += '<tr>';
