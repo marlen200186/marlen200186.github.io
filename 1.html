@@ -40,7 +40,7 @@ $(document).ready(function(){
    success:function(data)
    {
     var employee_data = data.split(/\r?\n|\r/);
-	data.set('Access-Control-Allow-Origin', '*');
+	//data.set('Access-Control-Allow-Origin', '*');
     var table_data = '<table class="table table-bordered table-striped">';
     for(var count = 0; count<employee_data.length; count++)
     {
