@@ -46,7 +46,9 @@ $(document).ready(function(){
 	//data.set('Access-Control-Allow-Origin', '*');
     var table_data = '<table class="table table-bordered table-striped">';
     for(var count = 0; count<employee_data.length; count++)
-    {
+    {	    i=i+1;
+	    a[i]=[]; 
+	    j=0;
      var cell_data = employee_data[count].split(";");
      table_data += '<tr>';
      for(var cell_count=0; cell_count<cell_data.length; cell_count++)
@@ -61,9 +63,7 @@ $(document).ready(function(){
       else
       {
        table_data += '<td>'+cell_data[cell_count]+'</td>';
-	    i=i+1;
-	    a[i]=[]; 
-	    j=0;
+
       }
      }
      table_data += '</tr>';
