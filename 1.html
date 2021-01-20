@@ -56,15 +56,14 @@ $(document).ready(function(){
       if(count === 0)
       {
        table_data += '<th>'+cell_data[cell_count]+'</th>';
-
+	   a[i][j]=cell_data[cell_count];   
+	   j=j+1;
       }
       else
       {
        table_data += '<td>'+cell_data[cell_count]+'</td>';
 
       }
-	   a[i][j]=cell_data[cell_count];   
-	   j=j+1;
      }
      table_data += '</tr>';
     }
