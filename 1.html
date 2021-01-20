@@ -30,7 +30,8 @@
 <script>
 
 
-
+var a=[];
+var i=0;
 $(document).ready(function(){
  $('#load_data').click(function(){
   $.ajax({
@@ -48,6 +49,8 @@ $(document).ready(function(){
      table_data += '<tr>';
      for(var cell_count=0; cell_count<cell_data.length; cell_count++)
      {
+	 a[i]=cell_data[cell_count];
+	 i=i+1;
       if(count === 0)
       {
        table_data += '<th>'+cell_data[cell_count]+'</th>';
