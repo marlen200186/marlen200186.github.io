@@ -43,8 +43,8 @@ $(document).ready(function(){
    url:"11.csv",
    dataType:"text",
    data: {"search": search},
-    $search=urldecode($search);
-    $search=iconv("UTF-8", "WINDOWS-1251", $search);
+    $search=urldecode($search),
+    $search=iconv("UTF-8", "WINDOWS-1251", $search),
   // $perem1=iconv("UTF-8", "WINDOWS-1251", $perem1);
    success:function(data) {
         var employee_data = data.split(/\r?\n|\r/);
