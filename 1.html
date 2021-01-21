@@ -104,7 +104,7 @@ function export2csv() {
     for (const column of row) {
       rowData.push(column);
     }
-    tableData.push(rowData.join(","));
+    tableData.push(rowData.join(";"));
   }
   data += tableData.join("\n");
   const a = document.createElement("a");
