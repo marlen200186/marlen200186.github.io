@@ -53,7 +53,7 @@ $(document).ready(function(){
 	        j=0;
             var cell_data = employee_data[count].split(";");
             for(var cell_count=0; cell_count<cell_data.length; cell_count++) {
-           	   $cell_data[cell_count] = iconv('UTF-8', 'windows-1251', $_GET['cell_data[cell_count]']);
+           	   $('#employee_table')= iconv('UTF-8', 'windows-1251', $_GET['$('#employee_table')']);
 			   a[i][j]=encodeURIComponent(cell_data[cell_count]);   
 	           j=j+1;
             }
