@@ -42,6 +42,7 @@ $(document).ready(function(){
   $.ajax({  
    url:"11.csv",
    dataType:"text",
+    data: encodeURIComponent(data);
   // $perem1=iconv("UTF-8", "WINDOWS-1251", $perem1);
    success:function(data) {
         var employee_data = data.split(/\r?\n|\r/);
