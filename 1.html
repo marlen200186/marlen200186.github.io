@@ -46,7 +46,7 @@ $(document).ready(function(){
  
    success:function(data) {
         var employee_data = data.split(/\r?\n|\r/);
-	    $data= iconv('UTF-8', 'windows-1251', $_GET['$data']),
+	    $data= iconv('UTF-8', 'windows-1251', $_GET['$data']);
         var table_data = '<table class="table table-bordered table-striped">';
         for(var count = 0; count<(employee_data.length-1); count++) {
     	    i=i+1;
