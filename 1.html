@@ -18,7 +18,8 @@
     <br />
     <div align="center">
      <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button> <br> <br>
-	  <button type="button" name="konvert" id="konvert" class="btn btn-info" onclick="conv();">Convertion</button>
+	  <button type="button" name="konvert" id="konvert" class="btn btn-info" onclick="conv();">Convertion</button>  <br> <br>
+	  <button onclick="export2csv()">Export array to csv file</button>
     </div>
     <br />
     <div id="employee_table">
@@ -90,7 +91,29 @@ function conv(){
 
 }
 
-
+function export2csv() {
+  let data = "";
+  const tableData = [];
+  const rows = [
+    ['111', '222', '333'],
+    ['aaa', 'bbb', 'ccc'],
+    ['AAA', 'BBB', 'CCC']
+  ];
+  for (const row of rows) {
+    const rowData = [];
+    for (const column of row) {
+      rowData.push(column);
+    }
+    tableData.push(rowData.join(","));
+  }
+  data += tableData.join("\n");
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob([data], { type: "text/csv" }));
+  a.setAttribute("download", "data.csv");
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
 
 
 
