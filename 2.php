@@ -1,4 +1,4 @@
-  <?php
+  <? php
   function ucs2toutf8{
 			   $text = "ааооогг";
 
