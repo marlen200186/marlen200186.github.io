@@ -37,7 +37,7 @@
 var a=[];                  
 var i=-1;
 var j=0; 
-$document= iconv('UTF-8', 'windows-1251', $_GET['11.csv']);
+//$document= iconv('UTF-8', 'windows-1251', $_GET['11.csv']);
 $(document).ready(function(){
  $('#load_data').click(function(){
   $.ajax({  
@@ -55,15 +55,7 @@ $(document).ready(function(){
 	        j=0;
             var cell_data = employee_data[count].split(";");
             for(var cell_count=0; cell_count<cell_data.length; cell_count++) {
-               <?php
-			   $text = cell_data[cell_count];
-
-                 echo 'Original : ', $text, PHP_EOL;
-                 echo 'TRANSLIT : ', iconv("UTF-8", "ISO-8859-1//TRANSLIT", $text), PHP_EOL;
-				echo 'IGNORE   : ', iconv("UTF-8", "ISO-8859-1//IGNORE", $text), PHP_EOL;
-				echo 'Plain    : ', iconv("UTF-8", "ISO-8859-1", $text), PHP_EOL;
-			   
-			   ?>
+             
 			   a[i][j]=encodeURIComponent(cell_data[cell_count]);   
 	           j=j+1;
             }
@@ -74,6 +66,17 @@ $(document).ready(function(){
   });
  });
 });
+
+  <?php
+			   $text = "ааооогг";
+
+                 echo 'Original : ', $text, PHP_EOL;
+                 echo 'TRANSLIT : ', iconv("UTF-8", "ISO-8859-1//TRANSLIT", $text), PHP_EOL;
+				echo 'IGNORE   : ', iconv("UTF-8", "ISO-8859-1//IGNORE", $text), PHP_EOL;
+				echo 'Plain    : ', iconv("UTF-8", "ISO-8859-1", $text), PHP_EOL;
+			   
+			   ?>
+
 
 
 function kodirov(stroka) { 
