@@ -32,8 +32,8 @@
 </html>
 
 <script>
-
-var a=[];
+//****************************************формирование массива из файла 11.csv в массив а
+var a=[];                  
 var i=-1;
 var j=0;
 $(document).ready(function(){
@@ -81,9 +81,10 @@ function kodirov(stroka) {
     return b64enc; 
 }
 
+//*********************************************функция конвертирования массива а
 function conv(){
-   for (var i=0; i<=(a.length-1);  i++) {
-       for (var j=0; j<=(a[i].length-1); j++) {
+   for (var i=1; i<=(a.length-1);  i++) {
+       for (var j=1; j<=(a[i].length-1); j++) {
 	       if (a[i][j] != "") {
 		     a[i][j]=kodirov(a[i][j]);}
 		}   
@@ -91,28 +92,25 @@ function conv(){
 
 }
 rows=a;
+//***********************************************выгрузка в файл data.csv
+
 function export2csv() {
-  let data = "";
-  const tableData = [];
-//  const rows = [
-//    ['111', '222', '333'],
-//    ['aaa', 'bbb', 'ccc'],
-//    ['AAA', 'BBB', 'CCC']
- // ];
-  for (const row of rows) {
-    const rowData = [];
-    for (const column of row) {
-      rowData.push(column);
-    }
-    tableData.push(rowData.join(";"));
-  }
-  data += tableData.join("\n");
-  const a = document.createElement("a");
-  a.href = URL.createObjectURL(new Blob([data], { type: "text/csv" }));
-  a.setAttribute("download", "data.csv");
-  document.body.appendChild(a);
-  a.click();
-  document.body.removeChild(a);
+     let data = "";
+     const tableData = [];
+     for (const row of rows) {
+          const rowData = [];
+          for (const column of row) {
+              rowData.push(column);
+          }
+          tableData.push(rowData.join(";"));
+     }
+     data += tableData.join("\n");
+     const a = document.createElement("a");
+     a.href = URL.createObjectURL(new Blob([data], { type: "text/csv" }));
+     a.setAttribute("download", "data.csv");
+     document.body.appendChild(a);
+     a.click();
+     document.body.removeChild(a);
 }
 
 
