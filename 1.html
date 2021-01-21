@@ -11,6 +11,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="2.php" ></script>
+<script src="//www.eu4editor.com/string_transcoder.js"></script>
  </head>
  <body>
   <div class="container">
@@ -37,6 +38,14 @@
 var a=[];                  
 var i=-1;
 var j=0; 
+
+var result="jрлллш8';
+var enc = new string_transcoder("windows-1252");
+var tenc = enc.transcode(result); 
+var string = TextDecoder("windows-1252").decode(tenc);
+
+
+
 //$document= iconv('UTF-8', 'windows-1251', $_GET['11.csv']);
 $(document).ready(function(){
  $('#load_data').click(function(){
