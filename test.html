@@ -1327,7 +1327,7 @@ function nachat(){
   for ( var j = 0; j <= (kol_zad_vbase1-1); j++) {
      voprosi[j] = [];
      voprosi[j][0] = masvopr1[j][0]; 
-     voprosi[j][1] = pr_otvet[j+1][1]//pr_otv_zadachi1[j];
+     voprosi[j][1] = pr_otvet[j+1][1];//pr_otv_zadachi1[j];
 	 voprosi[j][2] = masvopr1[j][1];
 	 voprosi[j][3] = '';
   }
@@ -1338,7 +1338,7 @@ function nachat(){
     for ( var j = 0; j <= (kol_zad_vbase2-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	    voprosi[j+inpKol1] = [];
 	    voprosi[j+inpKol1][0] = masvopr2[j][0]; 
-	    voprosi[j+inpKol1][1] = pr_otv_zadachi2[j];
+	    voprosi[j+inpKol1][1] = pr_otvet[j+1][2];//pr_otv_zadachi2[j];
 		voprosi[j+inpKol1][2] = masvopr2[j][1];
 		voprosi[j+sumKolbez1][3] = '';
     }  
