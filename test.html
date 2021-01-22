@@ -642,7 +642,41 @@ text-decoration: none;
  
 
 <script>
+//****************************************формирование массива из файла 11.csv в массив а
+var pr_otvet=[];                  
+var i=-1;
+var j=0; 
 
+
+$(document).ready(function(){
+ $('#load_data').click(function(){
+  $.ajax({  
+   url:"otv.csv",
+
+   dataType:"text",
+ 
+   success:function(data) {
+        var employee_data = data.split(/\r?\n|\r/);
+	   
+        var table_data = '<table class="table table-bordered table-striped">';
+        for(var count = 0; count<(employee_data.length-1); count++) {
+    	    i=i+1;
+	        pr_otvet[i]=[];     
+	        j=0;
+            var cell_data = employee_data[count].split(";");
+            for(var cell_count=0; cell_count<cell_data.length; cell_count++) {
+             
+			   pr_otvet[i][j]=cell_data[cell_count];   
+	           j=j+1;
+            }
+       }
+    $('#employee_table').html(table_data);
+  }
+
+  });
+ });
+});
+ 
 //************************************************************************************************************************************
 function ActiveStart() {              //функция активности/неавтивности кнопки НАЧАТЬ в зависимости от нулей в окнах
    for ( var i = 1; i <=27; i++) {
