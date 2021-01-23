@@ -80,59 +80,6 @@ var vopros_48 = "";
 var vopros_49 = "";
 var vopros_50 = "";
 
-var vopros_ris_1 = "да";
-var vopros_ris_2 = "да";
-var vopros_ris_3 = "да";
-var vopros_ris_4 = "да";
-var vopros_ris_5 = "да";
-var vopros_ris_6 = "да";
-var vopros_ris_7 = "да";
-var vopros_ris_8 = "да";
-var vopros_ris_9 = "да";
-var vopros_ris_10 = "да";
-var vopros_ris_11 = "да";
-var vopros_ris_12 = "да";
-var vopros_ris_13 = "да";
-var vopros_ris_14 = "да";
-var vopros_ris_15 = "да";
-var vopros_ris_16 = "да";
-var vopros_ris_17 = "да";
-var vopros_ris_18 = "да";
-var vopros_ris_19 = "да";
-var vopros_ris_20 = "да";
-var vopros_ris_21 = "да";
-var vopros_ris_22 = "да";
-var vopros_ris_23 = "да";
-var vopros_ris_24 = "да";
-var vopros_ris_25 = "да";
-var vopros_ris_26 = "да";
-var vopros_ris_27 = "да";
-var vopros_ris_28 = "да";
-var vopros_ris_29 = "да";
-var vopros_ris_30 = "да";
-var vopros_ris_31 = "да";
-var vopros_ris_32 = "да";
-var vopros_ris_33 = "да";
-var vopros_ris_34 = "да";
-var vopros_ris_35 = "да";
-var vopros_ris_36 = "да";
-var vopros_ris_37 = "да";
-var vopros_ris_38 = "да";
-var vopros_ris_39 = "да";
-var vopros_ris_40 = "да";
-var vopros_ris_41 = "да";
-var vopros_ris_42 = "да";
-var vopros_ris_43 = "да";
-var vopros_ris_44 = "да";
-var vopros_ris_45 = "да";
-var vopros_ris_46 = "да";
-var vopros_ris_47 = "да";
-var vopros_ris_48 = "да";
-var vopros_ris_49 = "да";
-var vopros_ris_50 = "да";
-
-
-
 
 
 //1_49,1_50,1_56,1_59,1_61, 1_63,1_73, 1_77, 1_80,1_83,
