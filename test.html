@@ -1473,7 +1473,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase14-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr14[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi14[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][14];//pr_otv_zadachi14[j];
 		  voprosi[j+sumKolbez1][2] = masvopr14[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
