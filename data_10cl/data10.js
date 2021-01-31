@@ -1,7 +1,7 @@
 var  kol_zad_vbase10_1=25;    
 var  kol_zad_vbase10_2=18;
 var  kol_zad_vbase10_3=47;
-var  kol_zad_vbase10_4=0;    
+var  kol_zad_vbase10_4=15;    
 var  kol_zad_vbase10_5=0;
 var  kol_zad_vbase10_6=0;    
 var  kol_zad_vbase10_7=0;
@@ -73,66 +73,11 @@ var vopros_48 = "";
 var vopros_49 = "";
 var vopros_50 = "";
 
-var vopros_ris_1 = "да";
-var vopros_ris_2 = "да";
-var vopros_ris_3 = "да";
-var vopros_ris_4 = "да";
-var vopros_ris_5 = "да";
-var vopros_ris_6 = "да";
-var vopros_ris_7 = "да";
-var vopros_ris_8 = "да";
-var vopros_ris_9 = "да";
-var vopros_ris_10 = "да";
-var vopros_ris_11 = "да";
-var vopros_ris_12 = "да";
-var vopros_ris_13 = "да";
-var vopros_ris_14 = "да";
-var vopros_ris_15 = "да";
-var vopros_ris_16 = "да";
-var vopros_ris_17 = "да";
-var vopros_ris_18 = "да";
-var vopros_ris_19 = "да";
-var vopros_ris_20 = "да";
-var vopros_ris_21 = "да";
-var vopros_ris_22 = "да";
-var vopros_ris_23 = "да";
-var vopros_ris_24 = "да";
-var vopros_ris_25 = "да";
-var vopros_ris_26 = "да";
-var vopros_ris_27 = "да";
-var vopros_ris_28 = "да";
-var vopros_ris_29 = "да";
-var vopros_ris_30 = "да";
-var vopros_ris_31 = "да";
-var vopros_ris_32 = "да";
-var vopros_ris_33 = "да";
-var vopros_ris_34 = "да";
-var vopros_ris_35 = "да";
-var vopros_ris_36 = "да";
-var vopros_ris_37 = "да";
-var vopros_ris_38 = "да";
-var vopros_ris_39 = "да";
-var vopros_ris_40 = "да";
-var vopros_ris_41 = "да";
-var vopros_ris_42 = "да";
-var vopros_ris_43 = "да";
-var vopros_ris_44 = "да";
-var vopros_ris_45 = "да";
-var vopros_ris_46 = "да";
-var vopros_ris_47 = "да";
-var vopros_ris_48 = "да";
-var vopros_ris_49 = "да";
-var vopros_ris_50 = "да";
 
 //старое первое задание на системы счисления
 //1_2,1_3,1_13,1_14,1_15,1_22,1_23,1_24,1_25,1_27,
 //1_40,1_43,1_45,1_47,1_48,1_55,1_73,1_74,1_77,1_79,
 //1_84,1_85,1_86,1_91,1_94
-var pr_otv_zadachi10_1 = ["NA==","NQ==","NA==","Mw==","Mw==",
-                       "MQ==","Mw==","Mg==","NA==","Mw==",
-                       "MQ==","Mw==","Mg==","MQ==","Mg==",
-					   "Mw==","NQ==","NA==","NQ==","NA==",
-					   "Mw==","NQ==","Ng==","MTU=","MTgx"];
 
 
 //задание №17 только с системами счисления
@@ -140,24 +85,24 @@ var pr_otv_zadachi10_1 = ["NA==","NQ==","NA==","Mw==","Mw==",
 //17_32,17_33, 17_34,17_39,17_40,
 //17_41,17_42,17_43,17_44,17_49.
 //17_50, 17_51,17_52
-var pr_otv_zadachi10_2 = ["NDcxIDM3MjA=","NjgzIDc0MDc=","ODU1NSA5MTA4ODA=","MTUzMyAyMTkwMTk0","NTUwIDMxMzY=",
-							"Mzc2IDc3NTA=","MjE4NyA2NTU4","MTAyNCA0MDk0","MTQyNSA5MDgw","NDk0IDE4NzQ=",
-							"MTE5IDk0MjE=","MjYgMjU4Ng==","MTE3NiAzNzIz","NTg1IDkxODk=","Nzc0IDQwOTI=",
-							"ODUxIDMzNQ==","MTQ3MDYxICA4MjM1Mzg=","NDUgMTU2MTA="];
 							
 
-var pr_otv_zadachi10_3 = ["Niw5LDE4","Mw==","NCw2LDksMTIsMTgsMzY=","Niw4LDEyLDI0","Niw5LDEyLDE4LDM2",				// старое 16_1,16_2,16_3,16_4,16_6
-							"NCw2LDgsMTIsMjQ=",	"OCwxNywyNg==","MTMsMjk=","OA==","MTM=",							//16_8,16_9,16_10,16_12,16_13
-							"MiwxMSwyMg==","NSwzMA==","NzI=","NQ==","OA==",											//16_14,16_15,16_16,16_18,16_19
-							"NCwyNCwyNQ==","Miw2LDcsOCwxOCwxOSwyMA==","NSwxMywyMQ==","MTEsMjI=","OSwyNw==",	    	//16_21,16_22,16_24,16_25,16_26
-							"OSwyNw==","NiwxNA==","Nw==","MTEsMjc=","Ng==",											//16_29,16_30,16_31,16_32,16_34
-							"Ng==" ,"MTM=" ,"Myw4LDEzLDE4"	,"NiwzMSw1Niw4MQ==","OCw3Mg==",							//16_35,16_36,16_40,16_41,16_42,
-							"NSw4MA==","Nyw1Ng==","MTQ=","MTQ=","MTI="  ,											//16_43,16_44,16_52,16_55,16_56
-							"MTY=","Nw==","OQ==","Niw5LDEwLDEy","Nyw4LDEwLDE0", 									//16_57,16_58,16_59,16_60,16_61
-							"MTI=","Nw==","MTE="	,"MTM=","MTE=",													//16_62,16_73,16_74,16_75,16_76
-							"MTc=","Mw=="];																			//16_77,16_78
+// старое 16_1,16_2,16_3,16_4,16_6
+//16_8,16_9,16_10,16_12,16_13
+//16_14,16_15,16_16,16_18,16_19
+//16_21,16_22,16_24,16_25,16_26
+//16_29,16_30,16_31,16_32,16_34
+//16_35,16_36,16_40,16_41,16_42,
+//16_43,16_44,16_52,16_55,16_56
+//16_57,16_58,16_59,16_60,16_61
+//16_62,16_73,16_74,16_75,16_76
+//16_77,16_78
 							
-							
+//Задание №4  - Списки из букв (ЕГЭ8,часть) тема сист счисления
+//182,179,178,155,127,126,87,86,85,84,
+//83,82,81,80,79,78,74,73,72,71,
+//38,37,36,35,20,19,18,17,16,15,
+//14,11,8,7,							
 
 var identificatori  = [['11','Иванов10'],       ['07691281','Брюхов10'], ['07604704','Ваганов10'],['0765825','Голомако10'], ['0760816','Емелин10'],
                        ['0766339','Калякин10'], ['0764957','Курицын10'], ['0761851','Лыжин10'],   ['0765331','Тарасенко10'],['07619845','Шустров10'],
