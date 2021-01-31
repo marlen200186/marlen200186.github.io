@@ -1,9 +1,9 @@
 var  kol_zad_vbase10_1=25;    
 var  kol_zad_vbase10_2=18;
 var  kol_zad_vbase10_3=47;
-var  kol_zad_vbase10_4=15;    
-var  kol_zad_vbase10_5=18;
-var  kol_zad_vbase10_6=5;    
+var  kol_zad_vbase10_4=10;  //  Списки из букв (ЕГЭ8,часть) тема сист счисления   
+var  kol_zad_vbase10_5=18;   // (ЕГЭ№17 без с.с)
+var  kol_zad_vbase10_6=5;   // (ЕГЭ№17 c с.с)
 var  kol_zad_vbase10_7=0;
 var  kol_zad_vbase10_8=0;
 var  kol_zad_vbase10_9=0;    
