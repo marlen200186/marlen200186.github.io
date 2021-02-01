@@ -938,7 +938,7 @@ function voiti(){
 				kol_zad_vbase5=10;
 				kol5.setAttribute("max",kol_zad_vbase5);
 
-				kol_zad_vbase8=34;
+				kol_zad_vbase8=60;
 				kol8.setAttribute("max",kol_zad_vbase8);
 	
 				kol_zad_vbase9=10;
@@ -1408,7 +1408,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase8-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr8[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi8[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][8];//pr_otv_zadachi8[j];
 		  voprosi[j+sumKolbez1][2] = masvopr8[j][1];
 		  voprosi[j+sumKolbez1][3] = '';
   }  

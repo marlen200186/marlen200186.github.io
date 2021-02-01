@@ -179,7 +179,7 @@ text-decoration: none;
 	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol15" >  <br> <br>
 		   
 		   
-		    <span id="Text6" style ="font-size:17px;">-------------- </span>&nbsp; 
+		    <span id="Text6" style ="font-size:17px;">6)ЕГЭ8 (комбинаторика)</span>&nbsp; 
 	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol6" >  &emsp;&emsp;
 		   <span id="Text16" style ="font-size:17px;">-------------- </span>
 	       <input type="number" style="width:70px; font-size:17px;vertical-align:inherit;" step="1" min="0" max="*jsvariable*" placeholder="0"  id="kol16" >  <br> <br>
@@ -768,6 +768,20 @@ function voiti(){
     id=document.getElementById('idNomer').value;
     for (var i=0; i<=(identificatori.length-1); i++) {
 	     if (id == identificatori[i][0]) {
+		 
+		 
+		 if (id == "0764378") {
+				kol_zad_vbase10_6=26;
+				kol6.setAttribute("max",kol_zad_vbase10_6);
+				
+			}
+		 
+		 
+		 
+		 
+		 
+		 
+		 
 		     document.getElementById('identification').value =  identificatori[i][1];
 		     document.getElementById('identification').style.display="none";
 			 document.getElementById('LabelZad1').style.display="block";
