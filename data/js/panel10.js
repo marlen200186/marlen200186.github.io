@@ -26,7 +26,7 @@ inpKol1=document.getElementById('kol1').valueAsNumber;
   inpKol20=document.getElementById('kol20').valueAsNumber;
 
 
-  inpKol=+inpKol1+ +inpKol2+ +inpKol3+ +inpKol4+ +inpKol5+ +inpKol6+ +inpKol7+ +inpKol8+ +inpKol9+ +inpKol10+ +inpKol11+ +inpKol12+ +inpKol13+ +inpKol14+ +inpKol15+ +inpKol6+ +inpKol17+ +inpKol18+ +inpKol19+ +inpKol20;     //количество заданий из формы
+  inpKol=+inpKol1+ +inpKol2+ +inpKol3+ +inpKol4+ +inpKol5+ +inpKol6+ +inpKol7+ +inpKol8+ +inpKol9+ +inpKol10+ +inpKol11+ +inpKol12+ +inpKol13+ +inpKol14+ +inpKol15+ +inpKol16+ +inpKol17+ +inpKol18+ +inpKol19+ +inpKol20;     //количество заданий из формы
      //количество заданий из формы
   numberZad=document.getElementById('kolich').value;
   
