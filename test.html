@@ -935,16 +935,16 @@ function voiti(){
 				kol_zad_vbase3=23;
 				kol3.setAttribute("max",kol_zad_vbase3);
 				
-				kol_zad_vbase5=10;
+				kol_zad_vbase5=16;
 				kol5.setAttribute("max",kol_zad_vbase5);
 
 				kol_zad_vbase8=60;
 				kol8.setAttribute("max",kol_zad_vbase8);
 	
-				kol_zad_vbase9=10;
+				kol_zad_vbase9=28;
 				kol9.setAttribute("max",kol_zad_vbase9);
 				
-				kol_zad_vbase12=9;
+				kol_zad_vbase12=15;
 				kol12.setAttribute("max",kol_zad_vbase12);
 				
 				kol_zad_vbase15=54;
@@ -1364,7 +1364,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase4-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr4[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi4[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][4];//pr_otv_zadachi4[j];
 		  voprosi[j+sumKolbez1][2] = masvopr4[j][1];
 		  voprosi[j+sumKolbez1][3] = "";
   }  
@@ -1397,7 +1397,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase7-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr7[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi7[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][7];//pr_otv_zadachi7[j];
 		  voprosi[j+sumKolbez1][2] = masvopr7[j][1];
 		  voprosi[j+sumKolbez1][3] = '';
   }  
@@ -1434,7 +1434,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase10-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr10[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi10[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][10];//pr_otv_zadachi10[j];
 		  voprosi[j+sumKolbez1][2] = masvopr10[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
@@ -1522,7 +1522,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase18-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr18[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi18[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][18];//pr_otv_zadachi18[j];
 		  voprosi[j+sumKolbez1][2] = masvopr18[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
@@ -1533,7 +1533,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase19-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr19[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi19[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][19];//pr_otv_zadachi19[j];
 		  voprosi[j+sumKolbez1][2] = masvopr19[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
@@ -1544,7 +1544,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase20-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr20[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi20[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][20];//pr_otv_zadachi20[j];
 		  voprosi[j+sumKolbez1][2] = masvopr20[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
@@ -1555,7 +1555,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase21-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr21[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi21[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][21];//pr_otv_zadachi21[j];
 		  voprosi[j+sumKolbez1][2] = masvopr21[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
@@ -1588,7 +1588,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase24-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr24[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi24[j]
+	      voprosi[j+sumKolbez1][1] =pr_otvet[j+1][24];// pr_otv_zadachi24[j]
 		  voprosi[j+sumKolbez1][2] = masvopr24[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
@@ -1599,7 +1599,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase25-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr25[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi25[j];
+	      voprosi[j+sumKolbez1][1] =pr_otvet[j+1][25];// pr_otv_zadachi25[j];
 		  voprosi[j+sumKolbez1][2] = masvopr25[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
@@ -1610,7 +1610,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase26-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr26[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi26[j];
+	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][26];//pr_otv_zadachi26[j];
 		  voprosi[j+sumKolbez1][2] = masvopr26[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
@@ -1621,7 +1621,7 @@ function nachat(){
 	 for ( var j = 0; j <= (kol_zad_vbase27-1); j++) {         //заполняем с колва первых зад +1, перекрывая тем самым ненужные первые задания
 	      voprosi[j+sumKolbez1] = [];
 	      voprosi[j+sumKolbez1][0] = masvopr27[j][0]; 
-	      voprosi[j+sumKolbez1][1] = pr_otv_zadachi27[j];
+	      voprosi[j+sumKolbez1][1] =pr_otvet[j+1][27];// pr_otv_zadachi27[j];
 		  voprosi[j+sumKolbez1][2] = masvopr27[j][1];
 		   voprosi[j+sumKolbez1][3] = '';
   }  
