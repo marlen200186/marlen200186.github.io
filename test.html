@@ -642,9 +642,13 @@ text-decoration: none;
  
 
 <script>
-jQuery(window).bind('beforeunload', function(){
-    return 'my text';
-});
+window.onunload = function()
+{
+    return confirm('Вы хотите покинуть сайт?')
+}
+window.onbeforeunload = function(){
+    return confirm('Точно хотите выйти?');
+}
 
 //****************************************формирование массива из файла database.csv в массив pr_otvet
 var pr_otvet=[];                  
