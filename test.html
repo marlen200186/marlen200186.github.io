@@ -642,10 +642,9 @@ text-decoration: none;
  
 
 <script>
-window.onunload = function() {
-    alert('Bye.');
-}
-
+$(window).unload(function(){
+  alert('Bye.');
+});
 
 
 //****************************************формирование массива из файла database.csv в массив pr_otvet
