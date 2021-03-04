@@ -72,20 +72,6 @@ text-decoration: none;
 
 </head>
 
-<script type="text/javascript">
-$(document).ready(function () {
-    $(window).on('beforeunload', function() {
-      document.write('<div>.....................</div>');  // HTML код в одну строчку!!!
-      return "Вы точно решили покинуть наш сайт?";
-	  proverit();
-      });
- 
-      $('a').click(function() {
-      $(window).off('beforeunload');
-	  	  proverit();
-    });
-  });
- </script>
 <input id="kolich" style="display:none"  > <br>
 
  <header align="top">
@@ -96,7 +82,7 @@ $(document).ready(function () {
 	</header> 
 
 <!--****************************************************************************************  -->
-<body class="text-center" >
+<body class="text-center"  onunload="alert('Вы точно решили покинуть наш сайт ?'); proverit();" >
 
 <!--***********************************************************************************создаем кнопки для переключения между вопросами********-->
 <div id="panel" class="alert alert-secondary" style=" position: absolute; left:20px; top:80px; display:none">
