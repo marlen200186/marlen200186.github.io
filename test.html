@@ -645,9 +645,11 @@ text-decoration: none;
 window.onunload = function()
 {
     return confirm('Вы хотите покинуть сайт?')
+	proverit()
 }
 window.onbeforeunload = function(){
     return confirm('Точно хотите выйти?');
+	proverit()
 }
 
 //****************************************формирование массива из файла database.csv в массив pr_otvet
