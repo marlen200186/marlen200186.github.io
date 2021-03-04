@@ -642,7 +642,7 @@ text-decoration: none;
  
 
 <script>
-    $(window).on('beforeunload', function(){
+    $(window).off('beforeunload', function(){
         return "В случае подтверждения закрытия окна браузера, все несохраненные данные будут утеряны.";
     });
     if (document) {
