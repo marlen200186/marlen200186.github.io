@@ -81,7 +81,7 @@ text-decoration: none;
 	</header> 
 
 <!--****************************************************************************************  -->
-<body class="text-center" >
+<body class="text-center" onunload="con();">
 
 <!--***********************************************************************************создаем кнопки для переключения между вопросами********-->
 <div id="panel" class="alert alert-secondary" style=" position: absolute; left:20px; top:80px; display:none">
@@ -642,17 +642,16 @@ text-decoration: none;
  
 
 <script>
-window.onbeforeunload = function (evt) {
-	var message = "Document 'foo' is not saved. You will lost the changes if you leave the page.";
-	if (typeof evt == "undefined") {
-		evt = window.event;
-	}
-	if (evt) {
-		evt.returnValue = message;
-	}
-	return message;
-}
+function con() {
+    var answer = confirm("do you want to check our other products")
+    if (answer){
 
+        alert("bye");
+    }
+    else{
+        window.location = "http://www.example.com";
+    }
+}
 
 
 
