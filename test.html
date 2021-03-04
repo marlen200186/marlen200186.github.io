@@ -642,14 +642,18 @@ text-decoration: none;
  
 
 <script>
-  $(window).on('beforeunload', function(){
-        return "Данные будут утеряны. Вы уверенные что хотите покинуть страницу?";
+    $(window).on('beforeunload', function(){
+        return "В случае подтверждения закрытия окна браузера, все несохраненные данные будут утеряны.";
     });
- 
-    $(document).on("submit", "form", function(event){
-        
-        $(window).off('beforeunload');
-    });
+    if (document) {
+        $(document).on("submit", "form", function(event) {
+            // disable unload warning
+            $(window).off('beforeunload');
+        })} if (document) {
+        $(document).on("click", "a", function(event) {
+            // disable unload warning
+            $(window).off('beforeunload');
+        })}
 
 
 //****************************************формирование массива из файла database.csv в массив pr_otvet
