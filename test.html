@@ -71,6 +71,19 @@ text-decoration: none;
 
 
 </head>
+
+<script type="text/javascript">
+$(document).ready(function () {
+    $(window).on('beforeunload', function() {
+      document.write('<div>.....................</div>');  // HTML код в одну строчку!!!
+      return "Вы точно решили покинуть наш сайт?";
+      });
+ 
+      $('a').click(function() {
+      $(window).off('beforeunload');
+    });
+  });
+ </script>
 <input id="kolich" style="display:none"  > <br>
 
  <header align="top">
@@ -643,10 +656,7 @@ text-decoration: none;
 
 <script>
 
-$(window).unload(
-  
-	proverit
-)
+
 
 //****************************************формирование массива из файла database.csv в массив pr_otvet
 var pr_otvet=[];                  
