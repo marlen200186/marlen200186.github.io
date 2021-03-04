@@ -645,10 +645,18 @@ text-decoration: none;
 <script>
 
 window.onbeforeunload = function(e){
-if (return){
-         proverit();
+
+ var message = "STOP!";
+            if (typeof e == "undefined") {
+                e = window.event;
+            }
+            if (e) {
+                e.returnValue = message;
+            }
+//if (e.return){
+  //       proverit();
       
-      }
+    //  }
 }
 
 //****************************************формирование массива из файла database.csv в массив pr_otvet
