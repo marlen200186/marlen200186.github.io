@@ -642,19 +642,17 @@ text-decoration: none;
  
 
 <script>
-    $(window).on('beforeunload', function(){
-        return "В случае подтверждения закрытия окна браузера, все несохраненные данные будут утеряны.";
-    });
-    if (document) {
-        $(document).on("submit", "form", function(event) {
-            // disable unload warning
-            $(window).off('beforeunload');
-        })} if (document) {
-        $(document).on("click", "a", function(event) {
-            // disable unload warning
-            $(window).off('beforeunload');
-        })}
-
+var linkClick = false;
+ 
+$("a").bind("click", () => {
+	linkClick = true;
+});
+ 
+window.onbeforeunload = () => () {                
+	if (!linkClick) { 
+		localStorage.status = 'Закрыли вкладку';
+	}
+};
 
 //****************************************формирование массива из файла database.csv в массив pr_otvet
 var pr_otvet=[];                  
