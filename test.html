@@ -77,6 +77,7 @@ $(document).ready(function () {
     $(window).on('beforeunload', function() {
       document.write('<div>.....................</div>');  // HTML код в одну строчку!!!
       return "Вы точно решили покинуть наш сайт?";
+	  proverit();
       });
  
       $('a').click(function() {
