@@ -647,7 +647,7 @@ text-decoration: none;
 window.onbeforeunload = function(e){
 
         return false;
-        proverit();
+        proveritbezvivoda();
       
   
 }
@@ -1727,6 +1727,88 @@ function sled_vopr(){       // отображениеnumberZad=document.getEleme
           }
 	
  }
+//****************************************************************************************************************
+function proveritbezvivoda(){                      // проверяет результаты без вывода на экран, для не запланированного выхода 
+ //document.getElementById('panel').style.display = "none";
+
+  inpKol1=document.getElementById('kol1').valueAsNumber;
+  inpKol2=document.getElementById('kol2').valueAsNumber;
+  inpKol3=document.getElementById('kol3').valueAsNumber;
+  inpKol4=document.getElementById('kol4').valueAsNumber;
+  inpKol5=document.getElementById('kol5').valueAsNumber;
+  inpKol6=document.getElementById('kol6').valueAsNumber;
+  inpKol7=document.getElementById('kol7').valueAsNumber;
+  inpKol8=document.getElementById('kol8').valueAsNumber;
+  inpKol9=document.getElementById('kol9').valueAsNumber;
+  
+  inpKol10=document.getElementById('kol10').valueAsNumber;
+  inpKol11=document.getElementById('kol11').valueAsNumber;
+  inpKol12=document.getElementById('kol12').valueAsNumber;
+  inpKol13=document.getElementById('kol13').valueAsNumber;
+  inpKol14=document.getElementById('kol14').valueAsNumber;
+  inpKol15=document.getElementById('kol15').valueAsNumber;
+  inpKol16=document.getElementById('kol16').valueAsNumber;
+  inpKol17=document.getElementById('kol17').valueAsNumber;
+  inpKol18=document.getElementById('kol18').valueAsNumber;
+  inpKol19=document.getElementById('kol19').valueAsNumber;
+  
+  inpKol20=document.getElementById('kol20').valueAsNumber;
+  inpKol21=document.getElementById('kol21').valueAsNumber;
+  inpKol22=document.getElementById('kol22').valueAsNumber;
+  inpKol23=document.getElementById('kol23').valueAsNumber;
+  inpKol24=document.getElementById('kol24').valueAsNumber;
+  inpKol25=document.getElementById('kol25').valueAsNumber;
+  inpKol26=document.getElementById('kol26').valueAsNumber;
+  inpKol27=document.getElementById('kol27').valueAsNumber;
+
+  inpKol=+inpKol1+ +inpKol2+ +inpKol3+ +inpKol4+ +inpKol5+ +inpKol6+ +inpKol7+ +inpKol8+ +inpKol9+ +inpKol10+ +inpKol11+ +inpKol12+ +inpKol13+ +inpKol14+ +inpKol15+ +inpKol16+ +inpKol17+ +inpKol18+ +inpKol19+ +inpKol20+ +inpKol21+ +inpKol22+ +inpKol23+ +inpKol24+ +inpKol25+ +inpKol26+ +inpKol27 ;     //количество заданий из формы
+  
+
+    otv_uch=[];          //создаем две табл с ответами и закодир ответами
+    otv_uch_orig=[];
+
+    for (var  i = 0; i <= (inpKol-1); i++){             
+       otv_uch[i] = document.getElementById('z_'+(i+1)).value;
+       otv_uch_orig[i] = otv_uch[i];
+       otv_uch[i] = kodirov(otv_uch[i]);
+     }
+
+    ball = 0;
+  //  document.getElementById('vopros'+inpKol).style.display = "none";    //прячем все вопросы
+  //  document.getElementById('kn_pr').style.display = "none";   
+	
+   // otveti = "<table class='table' ><tr class='table-active' ><td>№</td><td>Вопрос </td><td>Ответ</td></tr>"; //выводим таблицу с ответами
+    
+	stroka = '';
+    for (var  i = 0; i <= (inpKol-1); i++){ 
+       if(otv_uch[i] == voprosi[i][1]){
+           ball +=1;
+		   stroka += voprosi[i][2] + "_YES_"+otv_uch_orig[i]+"/";
+         //  otveti += "<tr class='table-success'><td>"+(i+1)+"</td><td>"+voprosi[i][0]+"</td><td>Вы ответили верно. Ваш ответ: "+otv_uch_orig[i]+"</td></tr>";
+       }else {
+         //  otveti += "<tr class='table-danger'><td>"+(i+1)+"</td><td>"+voprosi[i][0]+"</td><td>Вы ответили не верно. Ваш ответ: "+otv_uch_orig[i]+"</td></tr>"; 
+		   stroka += voprosi[i][2] + "_NO_"+otv_uch_orig[i]+"/";
+       }
+    }
+ 
+     vsego_zadach = inpKol;
+     procent_vip = ball/vsego_zadach * 100;
+     procent_vip = procent_vip.toFixed();
+	// document.getElementById('rezultat').innerHTML = "<span id='ot'>Задания выполнены верно на "+procent_vip+"%.</span><br><div class='progress'><div class='progress-bar' role='progressbar' style='width: "+procent_vip+"%' aria-valuenow='"+procent_vip+"' aria-valuemin='0' aria-valuemax='100'></div></div><br>"+otveti;
+
+	 
+//**************************************	    ВЫГРУЗКА в EXCEL
+
+     var http = new XMLHttpRequest();
+     var url =           "https://script.google.com/macros/s/AKfycbxZEremPYxpiJtfr8DGx30yiuWwbBQo9CI-JIPO/exec";
+     var params1 = "&p1=" + procent_vip;
+	 var params2 = "&p2=" + document.getElementById('identification').value;
+	 var params3 = "&p3=" + inpKol;
+	 var params4 = "&p4=" + ball;
+	 var params5 = "&p5=" + stroka;
+     http.open("GET", url+"?"+params1+params2+params3+params4+params5, true);                     //stroka  - записываем все номера задания и плюс или минус
+     http.send(null);
+}
     
 //*************************************************************************************************************************************
 
@@ -1736,7 +1818,7 @@ function sled_vopr(){       // отображениеnumberZad=document.getEleme
 function proverit(){
     document.getElementById('panel').style.display = "none";
 
-    inpKol1=document.getElementById('kol1').valueAsNumber;
+  inpKol1=document.getElementById('kol1').valueAsNumber;
   inpKol2=document.getElementById('kol2').valueAsNumber;
   inpKol3=document.getElementById('kol3').valueAsNumber;
   inpKol4=document.getElementById('kol4').valueAsNumber;
