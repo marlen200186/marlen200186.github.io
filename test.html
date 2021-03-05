@@ -643,8 +643,8 @@ text-decoration: none;
  
 
 <script>
-
-window.onbeforeunload = function(e){
+//*********************************************************вывод сообщения о закрытии, плюс отправка результатов, если закрылось
+window.onbeforeunload = function(e){     
        if (document.getElementById('panel').style.display == "block") {
        
         proveritbezvivoda();}
@@ -1779,7 +1779,7 @@ function proveritbezvivoda(){                      // проверяет рез�
 	
    // otveti = "<table class='table' ><tr class='table-active' ><td>№</td><td>Вопрос </td><td>Ответ</td></tr>"; //выводим таблицу с ответами
     
-	stroka = '';
+	stroka = 'АВТОСОХРАНЕНИЕ';
     for (var  i = 0; i <= (inpKol-1); i++){ 
        if(otv_uch[i] == voprosi[i][1]){
            ball +=1;
