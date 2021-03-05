@@ -645,12 +645,12 @@ text-decoration: none;
 <script>
 
 window.onbeforeunload = function(e){
-
+       if (document.getElementById('panel').style.display == "block") {
        
-        proveritbezvivoda();
+        proveritbezvivoda();}
        return false;
   
-}
+Х
 
 //****************************************формирование массива из файла database.csv в массив pr_otvet
 var pr_otvet=[];                  
