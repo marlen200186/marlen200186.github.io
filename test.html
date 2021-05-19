@@ -940,8 +940,7 @@ function voiti(){
 	     if (id == identificatori[i][0]) {
 		    if (id == "0764378") {
 				
-				kol_zad_vbase5=16;
-				kol5.setAttribute("max",kol_zad_vbase5);
+			
 
 				kol_zad_vbase8=60;
 				kol8.setAttribute("max",kol_zad_vbase8);
@@ -962,8 +961,7 @@ function voiti(){
 				kol_zad_vbase22=39;
 				kol22.setAttribute("max",kol_zad_vbase22);				
 				
-				kol_zad_vbase23=14;
-				kol23.setAttribute("max",kol_zad_vbase23);
+				
 			 }
 		     document.getElementById('identification').value =  identificatori[i][1];
 		     document.getElementById('identification').style.display="none";
@@ -1528,7 +1526,8 @@ function nachat(){
 	      voprosi[j+sumKolbez1][0] = masvopr18[j][0]; 
 	      voprosi[j+sumKolbez1][1] = pr_otvet[j+1][18];//pr_otv_zadachi18[j];
 		  voprosi[j+sumKolbez1][2] = masvopr18[j][1];
-		   voprosi[j+sumKolbez1][3] = '';
+		   voprosi[j+sumKolbez1][3] = "18_"+ (j+1) + ".xls"
+		 //  voprosi[j+sumKolbez1][3] = '';
   }  
      voprosi = peremeshat_vse_voprosi(voprosi,sumKolbez1,sumKolbez1+kol_zad_vbase18-1);
 	 voprosi.splice(sumKolbez1+inpKol18);      //удаляем ненужные вторые задания
