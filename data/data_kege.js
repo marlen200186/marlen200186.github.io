@@ -2,10 +2,10 @@ var  kol_zad_vbase1=18;
 var  kol_zad_vbase2=25;    
 var  kol_zad_vbase3=23;
 var  kol_zad_vbase4=34;    
-var  kol_zad_vbase5=0;
+var  kol_zad_vbase5=16;
 var  kol_zad_vbase6=18;    
 var  kol_zad_vbase7=29;
-var  kol_zad_vbase8=0;   //списки(34штуки)+комбинаторика (26)
+var  kol_zad_vbase8=60;   //списки(34штуки)+комбинаторика (26)
 var  kol_zad_vbase9=28;    
 var  kol_zad_vbase10=0;
 var  kol_zad_vbase11=20;    
@@ -20,7 +20,7 @@ var  kol_zad_vbase19=0;
 var  kol_zad_vbase20=0;
 var  kol_zad_vbase21=0;    
 var  kol_zad_vbase22=0;
-var  kol_zad_vbase23=0;
+var  kol_zad_vbase23=14;
 var  kol_zad_vbase24=0;    
 var  kol_zad_vbase25=0;
 var  kol_zad_vbase26=0;    
@@ -176,7 +176,7 @@ var vopros_50 = "";
 
 
 //23_112,23_111,23_110,23_109,23_107,23_106,23_101,23_100,23_99,23_97,
-//23_92,23_90,23_89,23_88
+//23_92,23_90,23_89,23_88,
 
 
 var identificatori  = [['22','Я'], ['07691281','Брюхов'], ['07604704','Ваганов'], ['0765825','Голомако'],['0760816','Емелин'],
