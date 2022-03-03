@@ -55,7 +55,10 @@ html, body { height:100%;}
 	footer{
 		padding:20px 0 22px 0;
 		border-top:5px solid #eee;
+		
+
 	}
+	
 
 
 
@@ -174,6 +177,7 @@ h4 {
 	background:#fff;
 	width:100%;
 }
+
 
 
 .contacts {
@@ -406,7 +410,8 @@ header nav ul li a.current, header nav ul li a:hover {
 /*===== footer =====*/
 footer {
 	color:#fff;
-}
+	
+	}  
 	footer .fleft {
 		padding-left:40px;
 	}
